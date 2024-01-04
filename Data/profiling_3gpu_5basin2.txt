@@ -1,0 +1,731 @@
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: basin5.asc
+                   Water file: NULL
+                  Output file: water.asc
+                 Scratch file: NULL
+                  Water added: 3.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 471
+                         NROWS 482
+                     XLLCORNER  313420.0
+                     YLLCORNER 5632511.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+157 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         157                  155            0   
+1 :         157                  155            156   
+2 :         159                  157            312   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+the running time of the first part is 0.09021, the second part is 0.39282
+        1000         0.430251           0.60
+the running time of the first part is 0.08915, the second part is 0.52299
+        2000         0.165572           1.31
+the running time of the first part is 0.09065, the second part is 0.61017
+        3000         0.154045           2.11
+the running time of the first part is 0.09051, the second part is 0.64647
+        4000         0.022132           2.94
+the running time of the first part is 0.09143, the second part is 0.65129
+        5000         0.009708           3.79
+the running time of the first part is 0.09150, the second part is 0.69614
+        6000         0.004256           4.67
+the running time of the first part is 0.09203, the second part is 0.72712
+        7000         0.001824           5.60
+the running time of the first part is 0.09183, the second part is 0.72256
+        8000         0.000765           6.51
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume    33010.8 m3
+       Volume change    33010.8 m3
+Final water coverage      0.063 
+    Mean water depth       47.6 mm
+     Max water depth      491.5 mm 
+     Iteration limit 0
+            Run Time       6.97 s
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: basin4_5m.asc
+                   Water file: NULL
+                  Output file: water.asc
+                 Scratch file: NULL
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 2520
+                         NROWS 1833
+                     XLLCORNER  301740.0
+                     YLLCORNER 5633271.0
+                      CELLSIZE       5.0
+                  NODATA_VALUE   -9999.0
+           Setting array sizes
+           
+841 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         841                  839            0   
+1 :         841                  839            840   
+2 :         840                  838            1680   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+the running time of the first part is 0.09972, the second part is 0.97548
+        1000         0.457243           2.63
+the running time of the first part is 0.09896, the second part is 1.15088
+        2000         0.127019           5.38
+the running time of the first part is 0.10387, the second part is 1.42728
+        3000         0.065491           8.45
+the running time of the first part is 0.10357, the second part is 1.53393
+        4000         0.060287          11.59
+the running time of the first part is 0.10273, the second part is 1.52203
+        5000         0.038109          14.71
+the running time of the first part is 0.10070, the second part is 1.59713
+        6000         0.012544          17.91
+the running time of the first part is 0.10235, the second part is 1.64478
+        7000         0.004997          21.15
+the running time of the first part is 0.10242, the second part is 1.65493
+        8000         0.005847          24.41
+the running time of the first part is 0.10182, the second part is 1.65305
+        9000         0.006093          27.66
+the running time of the first part is 0.10408, the second part is 1.66999
+        10000         0.005812          30.92
+the running time of the first part is 0.10011, the second part is 1.64294
+        11000         0.005025          34.20
+the running time of the first part is 0.10253, the second part is 1.71128
+        12000         0.004101          37.53
+the running time of the first part is 0.10238, the second part is 1.67453
+        13000         0.003281          40.82
+the running time of the first part is 0.10304, the second part is 1.66948
+        14000         0.002477          44.08
+the running time of the first part is 0.10283, the second part is 1.67017
+        15000         0.001684          47.36
+the running time of the first part is 0.10316, the second part is 1.67042
+        16000         0.000998          50.63
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume    37867.5 m3
+       Volume change    37867.5 m3
+Final water coverage      0.041 
+    Mean water depth       24.2 mm
+     Max water depth      458.2 mm 
+     Iteration limit 0
+            Run Time      53.08 s
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: culvert_basin1_5m.asc
+                   Water file: NULL
+                  Output file: water.asc
+                 Scratch file: NULL
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 3794
+                         NROWS 3986
+                     XLLCORNER  289240.0
+                     YLLCORNER 5645571.0
+                      CELLSIZE       5.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+1267 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1267                  1265            0   
+1 :         1267                  1265            1266   
+2 :         1262                  1260            2532   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+the running time of the first part is 0.08573, the second part is 4.43428
+        1000         0.442726          14.90
+the running time of the first part is 0.08660, the second part is 4.57991
+        2000         0.063579          29.79
+the running time of the first part is 0.08663, the second part is 5.42642
+        3000         0.030458          45.44
+the running time of the first part is 0.08730, the second part is 5.84021
+        4000         0.035132          61.54
+the running time of the first part is 0.08761, the second part is 5.89556
+        5000         0.014391          77.66
+the running time of the first part is 0.08844, the second part is 6.32539
+        6000         0.006735          94.24
+the running time of the first part is 0.08688, the second part is 6.44861
+        7000         0.005237         110.92
+the running time of the first part is 0.08709, the second part is 6.42743
+        8000         0.007669         127.51
+the running time of the first part is 0.08701, the second part is 6.54561
+        9000         0.005947         144.30
+the running time of the first part is 0.08619, the second part is 6.41313
+        10000         0.003177         160.92
+the running time of the first part is 0.08598, the second part is 6.43459
+        11000         0.003609         177.53
+the running time of the first part is 0.08657, the second part is 6.46872
+        12000         0.003464         194.27
+the running time of the first part is 0.08734, the second part is 6.42090
+        13000         0.003325         210.87
+the running time of the first part is 0.08670, the second part is 6.44091
+        14000         0.003193         227.55
+the running time of the first part is 0.08620, the second part is 6.49239
+        15000         0.002939         244.25
+the running time of the first part is 0.08724, the second part is 6.48119
+        16000         0.002502         260.91
+the running time of the first part is 0.08723, the second part is 6.48018
+        17000         0.002272         277.68
+the running time of the first part is 0.08547, the second part is 6.42684
+        18000         0.002149         294.26
+the running time of the first part is 0.08600, the second part is 6.39612
+        19000         0.002039         310.83
+the running time of the first part is 0.08601, the second part is 6.41605
+        20000         0.001927         327.52
+the running time of the first part is 0.08759, the second part is 6.66836
+        21000         0.001704         344.36
+the running time of the first part is 0.08743, the second part is 6.46246
+        22000         0.001458         361.03
+the running time of the first part is 0.08731, the second part is 6.48141
+        23000         0.001017         377.75
+the running time of the first part is 0.08747, the second part is 6.59245
+        24000         0.000870         394.56
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume   234321.8 m3
+       Volume change   234321.8 m3
+Final water coverage      0.051 
+    Mean water depth       19.7 mm
+     Max water depth      443.7 mm 
+     Iteration limit 0
+            Run Time     402.47 s
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: smithcreek_dem1m_sb5.asc
+                   Water file: NULL
+                  Output file: water.asc
+                 Scratch file: NULL
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         ncols 4712
+                         nrows 4826
+                     xllcorner  313418.0
+                     yllcorner 5632507.0
+                      cellsize       1.0
+                  NODATA_value   -9999.0
+           Setting array sizes
+           
+1573 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1573                  1571            0   
+1 :         1573                  1571            1572   
+2 :         1568                  1566            3144   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+the running time of the first part is 0.08761, the second part is 5.21236
+        1000         0.651428          18.01
+the running time of the first part is 0.08994, the second part is 5.15883
+        2000         0.137253          35.61
+the running time of the first part is 0.09076, the second part is 5.16428
+        3000         0.139149          53.18
+the running time of the first part is 0.09029, the second part is 5.12730
+        4000         0.051094          70.52
+the running time of the first part is 0.09072, the second part is 5.13629
+        5000         0.034281          88.03
+the running time of the first part is 0.09188, the second part is 5.41649
+        6000         0.037790         105.63
+the running time of the first part is 0.09004, the second part is 5.92346
+        7000         0.053915         123.73
+the running time of the first part is 0.08832, the second part is 6.05830
+        8000         0.024252         142.13
+the running time of the first part is 0.08907, the second part is 6.08996
+        9000         0.054208         160.40
+the running time of the first part is 0.08991, the second part is 6.22961
+        10000         0.097181         178.79
+the running time of the first part is 0.09055, the second part is 6.31340
+        11000         0.025466         197.46
+the running time of the first part is 0.09086, the second part is 6.27286
+        12000         0.024960         215.93
+the running time of the first part is 0.09035, the second part is 6.29456
+        13000         0.027676         234.45
+the running time of the first part is 0.09092, the second part is 6.35521
+        14000         0.058213         253.13
+the running time of the first part is 0.09003, the second part is 6.36281
+        15000         0.018596         271.68
+the running time of the first part is 0.09047, the second part is 6.40949
+        16000         0.026305         290.33
+the running time of the first part is 0.09110, the second part is 6.44224
+        17000         0.014867         309.08
+the running time of the first part is 0.08992, the second part is 6.43633
+        18000         0.023924         327.72
+the running time of the first part is 0.09052, the second part is 6.40497
+        19000         0.035007         346.34
+the running time of the first part is 0.09118, the second part is 6.47707
+        20000         0.015913         365.12
+the running time of the first part is 0.08936, the second part is 6.41231
+        21000         0.005890         383.71
+the running time of the first part is 0.09052, the second part is 6.46851
+        22000         0.007209         402.48
+the running time of the first part is 0.09091, the second part is 6.44975
+        23000         0.005272         421.20
+the running time of the first part is 0.09035, the second part is 6.43524
+        24000         0.005036         439.80
+the running time of the first part is 0.09126, the second part is 6.47189
+        25000         0.004979         458.67
+the running time of the first part is 0.09023, the second part is 6.43188
+        26000         0.012094         477.34
+the running time of the first part is 0.09008, the second part is 6.45238
+        27000         0.008227         495.95
+the running time of the first part is 0.09060, the second part is 6.42097
+        28000         0.008649         514.66
+the running time of the first part is 0.08972, the second part is 6.44044
+        29000         0.003972         533.34
+the running time of the first part is 0.08982, the second part is 6.36189
+        30000         0.003653         551.88
+the running time of the first part is 0.08966, the second part is 6.37933
+        31000         0.003290         570.59
+the running time of the first part is 0.09013, the second part is 6.41188
+        32000         0.003194         589.19
+the running time of the first part is 0.08990, the second part is 6.40526
+        33000         0.003036         607.74
+the running time of the first part is 0.09084, the second part is 6.45901
+        34000         0.002725         626.60
+the running time of the first part is 0.08975, the second part is 6.44476
+        35000         0.002635         645.20
+the running time of the first part is 0.09027, the second part is 6.52467
+        36000         0.002541         663.87
+the running time of the first part is 0.08987, the second part is 6.43107
+        37000         0.002406         682.62
+the running time of the first part is 0.09021, the second part is 6.41862
+        38000         0.003719         701.18
+the running time of the first part is 0.08859, the second part is 6.40032
+        39000         0.002864         719.79
+the running time of the first part is 0.08952, the second part is 6.42598
+        40000         0.002838         738.50
+the running time of the first part is 0.08925, the second part is 6.46010
+        41000         0.002355         757.09
+the running time of the first part is 0.09027, the second part is 6.46383
+        42000         0.002292         775.82
+the running time of the first part is 0.09025, the second part is 6.48358
+        43000         0.002092         794.50
+the running time of the first part is 0.08961, the second part is 6.38702
+        44000         0.001955         813.06
+the running time of the first part is 0.08997, the second part is 6.49256
+        45000         0.001851         831.84
+the running time of the first part is 0.09006, the second part is 6.42784
+        46000         0.001748         850.41
+the running time of the first part is 0.08965, the second part is 6.43675
+        47000         0.002522         869.11
+the running time of the first part is 0.08976, the second part is 6.48355
+        48000         0.001469         887.81
+the running time of the first part is 0.09019, the second part is 6.46731
+        49000         0.001338         906.42
+the running time of the first part is 0.08995, the second part is 6.48262
+        50000         0.001100         925.15
+the running time of the first part is 0.08985, the second part is 6.44037
+        51000         0.000968         943.80
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume    11003.6 m3
+       Volume change    11003.6 m3
+Final water coverage      0.042 
+    Mean water depth       24.0 mm
+     Max water depth      550.0 mm 
+     Iteration limit 0
+            Run Time     955.49 s
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: patched_YQ.asc
+                   Water file: NULL
+                  Output file: water.asc
+                 Scratch file: NULL
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 5877
+                         NROWS 5519
+                     XLLCORNER  572217.0
+                     YLLCORNER 5760951.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -10000.0
+           Setting array sizes
+           
+1960 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1960                  1958            0   
+1 :         1960                  1958            1959   
+2 :         1959                  1957            3918   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+the running time of the first part is 0.08418, the second part is 7.89801
+        1000         0.907838          26.94
+the running time of the first part is 0.08468, the second part is 7.67163
+        2000         0.303020          52.81
+the running time of the first part is 0.08565, the second part is 7.54527
+        3000         0.191851          78.33
+the running time of the first part is 0.08527, the second part is 7.44906
+        4000         0.133956         103.49
+the running time of the first part is 0.08535, the second part is 7.36227
+        5000         0.098083         128.40
+the running time of the first part is 0.08617, the second part is 7.33116
+        6000         0.048197         153.15
+the running time of the first part is 0.08585, the second part is 7.24761
+        7000         0.014351         177.70
+the running time of the first part is 0.08489, the second part is 7.22874
+        8000         0.013456         202.04
+the running time of the first part is 0.08574, the second part is 7.15925
+        9000         0.020014         226.37
+the running time of the first part is 0.08666, the second part is 7.15894
+        10000         0.011654         250.44
+the running time of the first part is 0.08696, the second part is 7.10383
+        11000         0.006989         274.69
+the running time of the first part is 0.08607, the second part is 7.10103
+        12000         0.006236         298.59
+the running time of the first part is 0.08526, the second part is 7.05320
+        13000         0.005719         322.60
+the running time of the first part is 0.08515, the second part is 7.06649
+        14000         0.005247         346.43
+the running time of the first part is 0.08626, the second part is 7.01975
+        15000         0.004815         370.26
+the running time of the first part is 0.08687, the second part is 7.04399
+        16000         0.004924         394.05
+the running time of the first part is 0.08450, the second part is 6.98261
+        17000         0.004059         417.65
+the running time of the first part is 0.08552, the second part is 7.05116
+        18000         0.003727         441.56
+the running time of the first part is 0.08535, the second part is 6.95894
+        19000         0.003423         465.10
+the running time of the first part is 0.08570, the second part is 7.13442
+        20000         0.003145         489.00
+the running time of the first part is 0.08622, the second part is 6.95271
+        21000         0.002888         512.56
+the running time of the first part is 0.08622, the second part is 6.99505
+        22000         0.002653         536.21
+the running time of the first part is 0.08672, the second part is 6.93973
+        23000         0.002438         559.83
+the running time of the first part is 0.08517, the second part is 6.96187
+        24000         0.002239         583.26
+the running time of the first part is 0.08581, the second part is 6.93199
+        25000         0.002057         607.03
+the running time of the first part is 0.08492, the second part is 6.97699
+        26000         0.001890         630.48
+the running time of the first part is 0.08628, the second part is 6.92212
+        27000         0.001751         654.05
+the running time of the first part is 0.08523, the second part is 6.91967
+        28000         0.001738         677.49
+the running time of the first part is 0.08520, the second part is 6.90148
+        29000         0.001726         700.93
+the running time of the first part is 0.08503, the second part is 6.90317
+        30000         0.001714         724.46
+the running time of the first part is 0.08546, the second part is 6.89108
+        31000         0.001701         747.80
+the running time of the first part is 0.08569, the second part is 6.91664
+        32000         0.001688         771.41
+the running time of the first part is 0.08589, the second part is 6.88391
+        33000         0.001676         794.74
+the running time of the first part is 0.08623, the second part is 6.93431
+        34000         0.001663         818.27
+the running time of the first part is 0.08590, the second part is 6.88499
+        35000         0.001650         841.70
+the running time of the first part is 0.08594, the second part is 6.91639
+        36000         0.001637         865.09
+the running time of the first part is 0.08612, the second part is 6.89017
+        37000         0.001623         888.61
+the running time of the first part is 0.08636, the second part is 6.93222
+        38000         0.001610         911.99
+the running time of the first part is 0.08503, the second part is 6.89130
+        39000         0.001597         935.55
+the running time of the first part is 0.08551, the second part is 6.90580
+        40000         0.001584         958.89
+the running time of the first part is 0.08596, the second part is 6.87251
+        41000         0.001571         982.30
+the running time of the first part is 0.08550, the second part is 6.93428
+        42000         0.001558        1005.83
+the running time of the first part is 0.08413, the second part is 6.86549
+        43000         0.001544        1029.16
+the running time of the first part is 0.08460, the second part is 6.94469
+        44000         0.001531        1052.75
+the running time of the first part is 0.08616, the second part is 6.86371
+        45000         0.001518        1076.03
+the running time of the first part is 0.08573, the second part is 6.91355
+        46000         0.001505        1099.58
+the running time of the first part is 0.08661, the second part is 6.86313
+        47000         0.001492        1122.86
+the running time of the first part is 0.08619, the second part is 6.88031
+        48000         0.001479        1146.38
+the running time of the first part is 0.08606, the second part is 6.86129
+        49000         0.001467        1169.66
+the running time of the first part is 0.08632, the second part is 6.88871
+        50000         0.001454        1193.12
+the running time of the first part is 0.08605, the second part is 6.86306
+        51000         0.001441        1216.52
+the running time of the first part is 0.08680, the second part is 6.90855
+        52000         0.001428        1239.94
+the running time of the first part is 0.08657, the second part is 6.87160
+        53000         0.001416        1263.35
+the running time of the first part is 0.08630, the second part is 6.94424
+        54000         0.001403        1286.71
+the running time of the first part is 0.08698, the second part is 6.87793
+        55000         0.001391        1310.24
+the running time of the first part is 0.08683, the second part is 7.03882
+        56000         0.001379        1333.80
+the running time of the first part is 0.08717, the second part is 6.87104
+        57000         0.001366        1357.26
+the running time of the first part is 0.08712, the second part is 6.90545
+        58000         0.001354        1380.62
+the running time of the first part is 0.08672, the second part is 6.85957
+        59000         0.001342        1403.94
+the running time of the first part is 0.08668, the second part is 6.91826
+        60000         0.001330        1427.48
+the running time of the first part is 0.08641, the second part is 6.85646
+        61000         0.001318        1450.73
+the running time of the first part is 0.08668, the second part is 6.90939
+        62000         0.001306        1474.27
+the running time of the first part is 0.08579, the second part is 6.85432
+        63000         0.001295        1497.54
+the running time of the first part is 0.08571, the second part is 6.88318
+        64000         0.001283        1520.90
+the running time of the first part is 0.08448, the second part is 6.86229
+        65000         0.001272        1544.27
+the running time of the first part is 0.08544, the second part is 6.85193
+        66000         0.001260        1567.50
+the running time of the first part is 0.08252, the second part is 6.86806
+        67000         0.001249        1590.94
+the running time of the first part is 0.08025, the second part is 6.86302
+        68000         0.001238        1614.27
+the running time of the first part is 0.08031, the second part is 6.86319
+        69000         0.001226        1637.63
+the running time of the first part is 0.08318, the second part is 7.46287
+        70000         0.001215        1661.54
+the running time of the first part is 0.08560, the second part is 6.85413
+        71000         0.001204        1684.90
+the running time of the first part is 0.08625, the second part is 6.91026
+        72000         0.001193        1708.40
+the running time of the first part is 0.08703, the second part is 6.85150
+        73000         0.001183        1731.68
+the running time of the first part is 0.08677, the second part is 6.91942
+        74000         0.001172        1755.24
+the running time of the first part is 0.08671, the second part is 6.85232
+        75000         0.001161        1778.49
+the running time of the first part is 0.08564, the second part is 6.89998
+        76000         0.001151        1801.88
+the running time of the first part is 0.08739, the second part is 6.86787
+        77000         0.001140        1825.26
+the running time of the first part is 0.08732, the second part is 6.89166
+        78000         0.001130        1848.59
+the running time of the first part is 0.08726, the second part is 6.86835
+        79000         0.001120        1872.14
+the running time of the first part is 0.08639, the second part is 6.91053
+        80000         0.001110        1895.47
+the running time of the first part is 0.08643, the second part is 6.86306
+        81000         0.001100        1918.90
+the running time of the first part is 0.08776, the second part is 6.90350
+        82000         0.001090        1942.25
+the running time of the first part is 0.08563, the second part is 6.85204
+        83000         0.001080        1965.54
+the running time of the first part is 0.08605, the second part is 6.90051
+        84000         0.001070        1989.02
+the running time of the first part is 0.08492, the second part is 6.84784
+        85000         0.001060        2012.24
+the running time of the first part is 0.08503, the second part is 6.90122
+        86000         0.001051        2035.74
+the running time of the first part is 0.08492, the second part is 6.84822
+        87000         0.001041        2058.96
+the running time of the first part is 0.08497, the second part is 6.92886
+        88000         0.001032        2082.45
+the running time of the first part is 0.08521, the second part is 6.85209
+        89000         0.001022        2105.73
+the running time of the first part is 0.08455, the second part is 6.88408
+        90000         0.001013        2129.04
+the running time of the first part is 0.08460, the second part is 6.85787
+        91000         0.001004        2152.47
+slurmstepd: error: *** JOB 673361 ON cdr294 CANCELLED AT 2021-04-24T10:37:59 DUE TO TIME LIMIT ***
