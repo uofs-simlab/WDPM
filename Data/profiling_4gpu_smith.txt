@@ -1,0 +1,44 @@
+               WDPM Parameters
+                Function used: add
+                     DEM file: smithcreek_dem1m_sb5.asc
+                   Water file: NULL
+                  Output file: water.asc
+                 Scratch file: NULL
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         ncols 4712
+                         nrows 4826
+                     xllcorner  313418.0
+                     yllcorner 5632507.0
+                      cellsize       1.0
+                  NODATA_value   -9999.0
+           Setting array sizes
+           
+1180 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1180                  1178            0   
+1 :         1180                  1178            1179   
+2 :         1180                  1178            2358   
+3 :         1174                  1172            3537   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+the read time is 0.00754, the write time is 0.01531, the kernel time is 4.02102, the second kernel time is 2.00875 
+the read time is 0.01418, the write time is 0.02311, the kernel time is 8.48651, the second kernel time is 4.22610 
+the read time is 0.01408, the write time is 0.02399, the kernel time is 6.32994, the second kernel time is 3.15144 
+the read time is 0.00690, the write time is 0.01572, the kernel time is 2.39133, the second kernel time is 1.18867 
+the boundary time is 8.96945, the iteration time is 8.66432 
+        1000         0.651426          19.99
