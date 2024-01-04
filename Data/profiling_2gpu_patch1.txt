@@ -1,0 +1,439 @@
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: patched_YQ.asc
+                   Water file: NULL
+                  Output file: water.asc
+                 Scratch file: NULL
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 5877
+                         NROWS 5519
+                     XLLCORNER  572217.0
+                     YLLCORNER 5760951.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -10000.0
+           Setting array sizes
+           
+2941 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         2941                  2939            0   
+1 :         2938                  2936            2940   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+the read time is 0.00832, the write time is 0.02986, the kernel time is 18.90109, the second kernel time is 9.47106 
+the read time is 0.00792, the write time is 0.02986, the kernel time is 18.19111, the second kernel time is 9.09789 
+the boundary time is 11.57085, the iteration time is 18.99330 
+        1000         0.907980          33.66
+the read time is 0.00832, the write time is 0.02987, the kernel time is 18.50680, the second kernel time is 18.74192 
+the read time is 0.00793, the write time is 0.02987, the kernel time is 17.59540, the second kernel time is 17.89915 
+the boundary time is 11.58357, the iteration time is 18.59574 
+        2000         0.303020          66.58
+the read time is 0.00832, the write time is 0.02986, the kernel time is 18.27890, the second kernel time is 27.89294 
+the read time is 0.00791, the write time is 0.02986, the kernel time is 17.27882, the second kernel time is 26.54078 
+the boundary time is 11.64753, the iteration time is 18.36748 
+        3000         0.191851          99.16
+the read time is 0.00831, the write time is 0.02986, the kernel time is 18.10625, the second kernel time is 36.95618 
+the read time is 0.00791, the write time is 0.02986, the kernel time is 17.05585, the second kernel time is 35.07129 
+the boundary time is 11.67622, the iteration time is 18.21782 
+        4000         0.133956         131.82
+the read time is 0.00832, the write time is 0.02986, the kernel time is 17.96689, the second kernel time is 45.95071 
+the read time is 0.00791, the write time is 0.02989, the kernel time is 16.88649, the second kernel time is 43.51773 
+the boundary time is 11.57864, the iteration time is 18.05734 
+        5000         0.098083         164.05
+the read time is 0.00832, the write time is 0.02986, the kernel time is 17.85606, the second kernel time is 54.89110 
+the read time is 0.00792, the write time is 0.02988, the kernel time is 16.75552, the second kernel time is 51.89754 
+the boundary time is 11.66159, the iteration time is 17.94877 
+        6000         0.048197         196.37
+the read time is 0.00832, the write time is 0.02986, the kernel time is 17.77260, the second kernel time is 63.78905 
+the read time is 0.00792, the write time is 0.02988, the kernel time is 16.65533, the second kernel time is 60.22820 
+the boundary time is 11.68512, the iteration time is 17.85927 
+        7000         0.014351         228.58
+the read time is 0.00833, the write time is 0.02986, the kernel time is 17.70531, the second kernel time is 72.65336 
+the read time is 0.00792, the write time is 0.02987, the kernel time is 16.57195, the second kernel time is 68.51601 
+the boundary time is 11.67600, the iteration time is 17.81734 
+        8000         0.013456         260.70
+the read time is 0.00832, the write time is 0.02986, the kernel time is 17.64393, the second kernel time is 81.48766 
+the read time is 0.00791, the write time is 0.02987, the kernel time is 16.49927, the second kernel time is 76.76776 
+the boundary time is 11.67010, the iteration time is 17.73108 
+        9000         0.020014         292.87
+the read time is 0.00834, the write time is 0.02986, the kernel time is 17.59364, the second kernel time is 90.29658 
+the read time is 0.00791, the write time is 0.02987, the kernel time is 16.43649, the second kernel time is 84.98850 
+the boundary time is 11.66593, the iteration time is 17.68304 
+        10000         0.011654         324.81
+the read time is 0.00832, the write time is 0.02987, the kernel time is 17.54692, the second kernel time is 99.08353 
+the read time is 0.00792, the write time is 0.02989, the kernel time is 16.38220, the second kernel time is 93.18097 
+the boundary time is 11.65491, the iteration time is 17.63694 
+        11000         0.006989         356.86
+the read time is 0.00835, the write time is 0.02987, the kernel time is 17.50732, the second kernel time is 107.85048 
+the read time is 0.00790, the write time is 0.02994, the kernel time is 16.33739, the second kernel time is 101.35149 
+the boundary time is 11.69689, the iteration time is 17.61008 
+        12000         0.006236         388.85
+the read time is 0.00839, the write time is 0.02996, the kernel time is 17.47928, the second kernel time is 116.60410 
+the read time is 0.00796, the write time is 0.02992, the kernel time is 16.30013, the second kernel time is 109.50278 
+the boundary time is 12.11292, the iteration time is 17.57782 
+        13000         0.005719         421.33
+the read time is 0.00844, the write time is 0.03004, the kernel time is 17.44334, the second kernel time is 125.34060 
+the read time is 0.00803, the write time is 0.03001, the kernel time is 16.26683, the second kernel time is 117.63852 
+the boundary time is 12.24583, the iteration time is 17.54879 
+        14000         0.005247         454.11
+the read time is 0.00843, the write time is 0.03006, the kernel time is 17.41889, the second kernel time is 134.06403 
+the read time is 0.00802, the write time is 0.03014, the kernel time is 16.23835, the second kernel time is 125.76065 
+the boundary time is 12.18598, the iteration time is 17.54491 
+        15000         0.004815         486.54
+the read time is 0.00844, the write time is 0.03009, the kernel time is 17.39576, the second kernel time is 142.77645 
+the read time is 0.00799, the write time is 0.03027, the kernel time is 16.21401, the second kernel time is 133.87017 
+the boundary time is 12.16829, the iteration time is 17.49650 
+        16000         0.004924         519.22
+the read time is 0.00847, the write time is 0.03018, the kernel time is 17.37696, the second kernel time is 151.47919 
+the read time is 0.00797, the write time is 0.03009, the kernel time is 16.19320, the second kernel time is 141.96855 
+the boundary time is 12.15942, the iteration time is 17.50347 
+        17000         0.004059         551.65
+the read time is 0.00845, the write time is 0.03004, the kernel time is 17.36078, the second kernel time is 160.17464 
+the read time is 0.00804, the write time is 0.03012, the kernel time is 16.17140, the second kernel time is 150.05730 
+the boundary time is 12.13905, the iteration time is 17.46012 
+        18000         0.003727         584.15
+the read time is 0.00843, the write time is 0.03004, the kernel time is 17.34605, the second kernel time is 168.86217 
+the read time is 0.00798, the write time is 0.03004, the kernel time is 16.15435, the second kernel time is 158.13838 
+the boundary time is 12.13941, the iteration time is 17.44634 
+        19000         0.003423         616.70
+the read time is 0.00839, the write time is 0.03003, the kernel time is 17.33064, the second kernel time is 177.54246 
+the read time is 0.00798, the write time is 0.03005, the kernel time is 16.13792, the second kernel time is 166.21177 
+the boundary time is 12.14703, the iteration time is 17.42917 
+        20000         0.003145         649.03
+the read time is 0.00842, the write time is 0.03006, the kernel time is 17.31989, the second kernel time is 186.21701 
+the read time is 0.00804, the write time is 0.03005, the kernel time is 16.12529, the second kernel time is 174.27840 
+the boundary time is 12.15526, the iteration time is 17.42932 
+        21000         0.002888         681.60
+the read time is 0.00842, the write time is 0.03001, the kernel time is 17.30763, the second kernel time is 194.88626 
+the read time is 0.00805, the write time is 0.03002, the kernel time is 16.11319, the second kernel time is 182.33832 
+the boundary time is 12.11744, the iteration time is 17.40854 
+        22000         0.002653         713.84
+the read time is 0.00845, the write time is 0.03008, the kernel time is 17.29654, the second kernel time is 203.55037 
+the read time is 0.00801, the write time is 0.02995, the kernel time is 16.10111, the second kernel time is 190.39171 
+the boundary time is 12.14667, the iteration time is 17.39885 
+        23000         0.002438         746.41
+the read time is 0.00846, the write time is 0.03008, the kernel time is 17.29114, the second kernel time is 212.21143 
+the read time is 0.00800, the write time is 0.02999, the kernel time is 16.09026, the second kernel time is 198.44032 
+the boundary time is 12.14069, the iteration time is 17.39476 
+        24000         0.002239         778.91
+the read time is 0.00845, the write time is 0.03022, the kernel time is 17.28094, the second kernel time is 220.86800 
+the read time is 0.00808, the write time is 0.03018, the kernel time is 16.08095, the second kernel time is 206.48334 
+the boundary time is 12.15392, the iteration time is 17.43875 
+        25000         0.002057         811.33
+the read time is 0.00851, the write time is 0.03004, the kernel time is 17.27474, the second kernel time is 229.52116 
+the read time is 0.00801, the write time is 0.03019, the kernel time is 16.07524, the second kernel time is 214.52327 
+the boundary time is 12.12288, the iteration time is 17.37971 
+        26000         0.001890         843.84
+the read time is 0.00846, the write time is 0.02999, the kernel time is 17.26454, the second kernel time is 238.16843 
+the read time is 0.00797, the write time is 0.03003, the kernel time is 16.06678, the second kernel time is 222.55905 
+the boundary time is 12.12907, the iteration time is 17.36579 
+        27000         0.001750         876.21
+the read time is 0.00849, the write time is 0.03028, the kernel time is 17.25853, the second kernel time is 246.81270 
+the read time is 0.00799, the write time is 0.03015, the kernel time is 16.05987, the second kernel time is 230.59146 
+the boundary time is 12.11829, the iteration time is 17.36016 
+        28000         0.001738         908.53
+the read time is 0.00840, the write time is 0.03017, the kernel time is 17.25326, the second kernel time is 255.45408 
+the read time is 0.00803, the write time is 0.03021, the kernel time is 16.05214, the second kernel time is 238.62045 
+the boundary time is 12.16830, the iteration time is 17.35376 
+        29000         0.001726         941.03
+the read time is 0.00847, the write time is 0.03013, the kernel time is 17.24997, the second kernel time is 264.09422 
+the read time is 0.00799, the write time is 0.03026, the kernel time is 16.04645, the second kernel time is 246.64682 
+the boundary time is 12.13898, the iteration time is 17.35294 
+        30000         0.001714         973.32
+the read time is 0.00838, the write time is 0.03016, the kernel time is 17.24369, the second kernel time is 272.73134 
+the read time is 0.00803, the write time is 0.03003, the kernel time is 16.04097, the second kernel time is 254.66987 
+the boundary time is 12.15343, the iteration time is 17.34583 
+        31000         0.001701        1005.79
+the read time is 0.00849, the write time is 0.03010, the kernel time is 17.24068, the second kernel time is 281.36689 
+the read time is 0.00802, the write time is 0.03012, the kernel time is 16.03622, the second kernel time is 262.69134 
+the boundary time is 12.20126, the iteration time is 17.34724 
+        32000         0.001688        1038.42
+the read time is 0.00841, the write time is 0.03014, the kernel time is 17.23741, the second kernel time is 290.00009 
+the read time is 0.00806, the write time is 0.03003, the kernel time is 16.03027, the second kernel time is 270.71038 
+the boundary time is 12.20217, the iteration time is 17.34911 
+        33000         0.001675        1070.74
+the read time is 0.00851, the write time is 0.03015, the kernel time is 17.23312, the second kernel time is 298.63181 
+the read time is 0.00805, the write time is 0.03004, the kernel time is 16.02641, the second kernel time is 278.72751 
+the boundary time is 12.20124, the iteration time is 17.33967 
+        34000         0.001663        1103.34
+the read time is 0.00846, the write time is 0.03011, the kernel time is 17.22867, the second kernel time is 307.26171 
+the read time is 0.00801, the write time is 0.03017, the kernel time is 16.02253, the second kernel time is 286.74258 
+the boundary time is 12.19630, the iteration time is 17.35919 
+        35000         0.001650        1135.90
+the read time is 0.00843, the write time is 0.03011, the kernel time is 17.22916, the second kernel time is 315.89181 
+the read time is 0.00797, the write time is 0.03014, the kernel time is 16.01815, the second kernel time is 294.75568 
+the boundary time is 12.17381, the iteration time is 17.33346 
+        36000         0.001636        1168.26
+the read time is 0.00845, the write time is 0.03007, the kernel time is 17.22310, the second kernel time is 324.51910 
+the read time is 0.00796, the write time is 0.03010, the kernel time is 16.01496, the second kernel time is 302.76703 
+the boundary time is 12.19308, the iteration time is 17.32800 
+        37000         0.001623        1200.78
+the read time is 0.00848, the write time is 0.03016, the kernel time is 17.22220, the second kernel time is 333.14560 
+the read time is 0.00808, the write time is 0.03009, the kernel time is 16.01231, the second kernel time is 310.77756 
+the boundary time is 12.12937, the iteration time is 17.32384 
+        38000         0.001610        1232.99
+the read time is 0.00841, the write time is 0.03004, the kernel time is 17.21904, the second kernel time is 341.77070 
+the read time is 0.00802, the write time is 0.03002, the kernel time is 16.00858, the second kernel time is 318.78609 
+the boundary time is 12.17829, the iteration time is 17.32235 
+        39000         0.001597        1265.44
+the read time is 0.00844, the write time is 0.03000, the kernel time is 17.22017, the second kernel time is 350.39554 
+the read time is 0.00797, the write time is 0.03005, the kernel time is 16.00643, the second kernel time is 326.79364 
+the boundary time is 12.31139, the iteration time is 17.32512 
+        40000         0.001584        1298.01
+the read time is 0.00841, the write time is 0.03016, the kernel time is 17.21761, the second kernel time is 359.01986 
+the read time is 0.00799, the write time is 0.03007, the kernel time is 16.00334, the second kernel time is 334.79817 
+the boundary time is 12.02513, the iteration time is 17.31792 
+        41000         0.001571        1330.05
+the read time is 0.00844, the write time is 0.03008, the kernel time is 17.21572, the second kernel time is 367.64432 
+the read time is 0.00801, the write time is 0.03013, the kernel time is 16.00060, the second kernel time is 342.80289 
+the boundary time is 12.05055, the iteration time is 17.32334 
+        42000         0.001558        1362.30
+the read time is 0.00850, the write time is 0.03005, the kernel time is 17.21521, the second kernel time is 376.26756 
+the read time is 0.00806, the write time is 0.03010, the kernel time is 15.99908, the second kernel time is 350.80771 
+the boundary time is 12.00507, the iteration time is 17.31856 
+        43000         0.001544        1394.48
+the read time is 0.00845, the write time is 0.02997, the kernel time is 17.21071, the second kernel time is 384.88855 
+the read time is 0.00804, the write time is 0.02993, the kernel time is 15.99758, the second kernel time is 358.81065 
+the boundary time is 11.97385, the iteration time is 17.31019 
+        44000         0.001531        1426.57
+the read time is 0.00850, the write time is 0.03016, the kernel time is 17.20692, the second kernel time is 393.50729 
+the read time is 0.00801, the write time is 0.03006, the kernel time is 15.99659, the second kernel time is 366.81437 
+the boundary time is 11.93562, the iteration time is 17.31052 
+        45000         0.001518        1458.66
+the read time is 0.00848, the write time is 0.03015, the kernel time is 17.21058, the second kernel time is 402.12822 
+the read time is 0.00801, the write time is 0.03003, the kernel time is 15.99538, the second kernel time is 374.81640 
+the boundary time is 11.95656, the iteration time is 17.31075 
+        46000         0.001505        1490.89
+the read time is 0.00847, the write time is 0.03019, the kernel time is 17.20547, the second kernel time is 410.74631 
+the read time is 0.00809, the write time is 0.03013, the kernel time is 15.99454, the second kernel time is 382.81892 
+the boundary time is 11.90565, the iteration time is 17.31025 
+        47000         0.001492        1523.03
+the read time is 0.00844, the write time is 0.03011, the kernel time is 17.20392, the second kernel time is 419.36371 
+the read time is 0.00796, the write time is 0.03013, the kernel time is 15.99170, the second kernel time is 390.82001 
+the boundary time is 11.87339, the iteration time is 17.35838 
+        48000         0.001479        1555.05
+the read time is 0.00840, the write time is 0.03013, the kernel time is 17.20755, the second kernel time is 427.98318 
+the read time is 0.00802, the write time is 0.03014, the kernel time is 15.99225, the second kernel time is 398.82179 
+the boundary time is 11.84728, the iteration time is 17.31046 
+        49000         0.001467        1586.96
+the read time is 0.00846, the write time is 0.03019, the kernel time is 17.20512, the second kernel time is 436.60052 
+the read time is 0.00804, the write time is 0.03011, the kernel time is 15.99096, the second kernel time is 406.82234 
+the boundary time is 11.83008, the iteration time is 17.30422 
+        50000         0.001454        1618.85
+the read time is 0.00841, the write time is 0.03012, the kernel time is 17.20280, the second kernel time is 445.21769 
+the read time is 0.00808, the write time is 0.03003, the kernel time is 15.99103, the second kernel time is 414.82176 
+the boundary time is 11.80685, the iteration time is 17.31851 
+        51000         0.001441        1650.69
+the read time is 0.00852, the write time is 0.03006, the kernel time is 17.19898, the second kernel time is 453.83342 
+the read time is 0.00803, the write time is 0.03010, the kernel time is 15.98792, the second kernel time is 422.82095 
+the boundary time is 11.78944, the iteration time is 17.30149 
+        52000         0.001428        1682.57
+the read time is 0.00846, the write time is 0.03011, the kernel time is 17.19878, the second kernel time is 462.44826 
+the read time is 0.00801, the write time is 0.03017, the kernel time is 15.98722, the second kernel time is 430.82021 
+the boundary time is 11.78917, the iteration time is 17.30707 
+        53000         0.001416        1714.38
+the read time is 0.00853, the write time is 0.03034, the kernel time is 17.19628, the second kernel time is 471.06282 
+the read time is 0.00800, the write time is 0.03006, the kernel time is 15.98850, the second kernel time is 438.81796 
+the boundary time is 11.79211, the iteration time is 17.29841 
+        54000         0.001403        1746.19
+the read time is 0.00838, the write time is 0.03000, the kernel time is 17.20012, the second kernel time is 479.67928 
+the read time is 0.00795, the write time is 0.03005, the kernel time is 15.98479, the second kernel time is 446.81588 
+the boundary time is 11.74556, the iteration time is 17.29927 
+        55000         0.001391        1777.98
+the read time is 0.00836, the write time is 0.02994, the kernel time is 17.19988, the second kernel time is 488.29432 
+the read time is 0.00794, the write time is 0.02989, the kernel time is 15.98429, the second kernel time is 454.81251 
+the boundary time is 11.74261, the iteration time is 17.29898 
+        56000         0.001379        1809.72
+the read time is 0.00845, the write time is 0.03000, the kernel time is 17.19874, the second kernel time is 496.90907 
+the read time is 0.00799, the write time is 0.03008, the kernel time is 15.98429, the second kernel time is 462.80970 
+the boundary time is 11.83899, the iteration time is 17.31564 
+        57000         0.001366        1841.59
+the read time is 0.00843, the write time is 0.03003, the kernel time is 17.19960, the second kernel time is 505.52447 
+the read time is 0.00804, the write time is 0.03014, the kernel time is 15.98311, the second kernel time is 470.80693 
+the boundary time is 11.82720, the iteration time is 17.30143 
+        58000         0.001354        1873.47
+the read time is 0.00848, the write time is 0.03002, the kernel time is 17.19915, the second kernel time is 514.13915 
+the read time is 0.00802, the write time is 0.03011, the kernel time is 15.98324, the second kernel time is 478.80433 
+the boundary time is 11.82169, the iteration time is 17.42952 
+        59000         0.001342        1905.47
+the read time is 0.00845, the write time is 0.03007, the kernel time is 17.19952, the second kernel time is 522.75335 
+the read time is 0.00802, the write time is 0.03016, the kernel time is 15.98135, the second kernel time is 486.80113 
+the boundary time is 11.82002, the iteration time is 17.30576 
+        60000         0.001330        1937.36
+the read time is 0.00844, the write time is 0.03014, the kernel time is 17.19686, the second kernel time is 531.36719 
+the read time is 0.00800, the write time is 0.03018, the kernel time is 15.98075, the second kernel time is 494.79709 
+the boundary time is 11.80936, the iteration time is 17.29624 
+        61000         0.001318        1969.22
+the read time is 0.00842, the write time is 0.03013, the kernel time is 17.19669, the second kernel time is 539.98094 
+the read time is 0.00801, the write time is 0.03004, the kernel time is 15.98174, the second kernel time is 502.79298 
+the boundary time is 11.85173, the iteration time is 17.29750 
+        62000         0.001306        2001.22
+the read time is 0.00845, the write time is 0.03003, the kernel time is 17.19895, the second kernel time is 548.59509 
+the read time is 0.00807, the write time is 0.03012, the kernel time is 15.97978, the second kernel time is 510.78813 
+the boundary time is 11.83660, the iteration time is 17.30731 
+        63000         0.001295        2033.13
+the read time is 0.00843, the write time is 0.03013, the kernel time is 17.19350, the second kernel time is 557.20601 
+the read time is 0.00807, the write time is 0.03006, the kernel time is 15.97908, the second kernel time is 518.78271 
+the boundary time is 11.82712, the iteration time is 17.29709 
+        64000         0.001283        2065.00
+the read time is 0.00848, the write time is 0.03002, the kernel time is 17.19070, the second kernel time is 565.81681 
+the read time is 0.00799, the write time is 0.03020, the kernel time is 15.97879, the second kernel time is 526.77708 
+the boundary time is 11.66346, the iteration time is 17.29125 
+        65000         0.001272        2096.67
+the read time is 0.00842, the write time is 0.02991, the kernel time is 17.18679, the second kernel time is 574.42652 
+the read time is 0.00795, the write time is 0.02995, the kernel time is 15.97730, the second kernel time is 534.77090 
+the boundary time is 11.30953, the iteration time is 17.27614 
+        66000         0.001260        2127.91
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18701, the second kernel time is 583.03529 
+the read time is 0.00791, the write time is 0.02987, the kernel time is 15.97848, the second kernel time is 542.76515 
+the boundary time is 11.25501, the iteration time is 17.27572 
+        67000         0.001249        2159.01
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18727, the second kernel time is 591.64388 
+the read time is 0.00791, the write time is 0.02989, the kernel time is 15.97644, the second kernel time is 550.75896 
+the boundary time is 11.26938, the iteration time is 17.33005 
+        68000         0.001238        2190.19
+the read time is 0.00835, the write time is 0.02989, the kernel time is 17.18541, the second kernel time is 600.25275 
+the read time is 0.00790, the write time is 0.02987, the kernel time is 15.97634, the second kernel time is 558.75233 
+the boundary time is 11.25576, the iteration time is 17.27357 
+        69000         0.001226        2221.30
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18581, the second kernel time is 608.86076 
+the read time is 0.00791, the write time is 0.02988, the kernel time is 15.97589, the second kernel time is 566.74582 
+the boundary time is 11.28205, the iteration time is 17.27285 
+        70000         0.001215        2252.42
+the read time is 0.00833, the write time is 0.02988, the kernel time is 17.18421, the second kernel time is 617.46841 
+the read time is 0.00792, the write time is 0.02987, the kernel time is 15.97580, the second kernel time is 574.73958 
+the boundary time is 11.25104, the iteration time is 17.27217 
+        71000         0.001204        2283.51
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18535, the second kernel time is 626.07625 
+the read time is 0.00791, the write time is 0.02987, the kernel time is 15.97573, the second kernel time is 582.73261 
+the boundary time is 11.28546, the iteration time is 17.27211 
+        72000         0.001193        2314.64
+the read time is 0.00833, the write time is 0.02990, the kernel time is 17.18307, the second kernel time is 634.68338 
+the read time is 0.00791, the write time is 0.02988, the kernel time is 15.97574, the second kernel time is 590.72578 
+the boundary time is 11.25246, the iteration time is 17.27184 
+        73000         0.001183        2345.73
+the read time is 0.00832, the write time is 0.02988, the kernel time is 17.18377, the second kernel time is 643.29055 
+the read time is 0.00791, the write time is 0.02989, the kernel time is 15.97578, the second kernel time is 598.71888 
+the boundary time is 11.27547, the iteration time is 17.27196 
+        74000         0.001172        2376.85
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18213, the second kernel time is 651.89808 
+the read time is 0.00792, the write time is 0.02987, the kernel time is 15.97467, the second kernel time is 606.71224 
+the boundary time is 11.24881, the iteration time is 17.27076 
+        75000         0.001161        2407.96
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18253, the second kernel time is 660.50476 
+the read time is 0.00791, the write time is 0.02989, the kernel time is 15.97399, the second kernel time is 614.70443 
+the boundary time is 11.24745, the iteration time is 17.26860 
+        76000         0.001151        2439.06
+the read time is 0.00832, the write time is 0.02989, the kernel time is 17.18307, the second kernel time is 669.11195 
+the read time is 0.00792, the write time is 0.02987, the kernel time is 15.97328, the second kernel time is 622.69766 
+the boundary time is 11.26753, the iteration time is 17.28055 
+        77000         0.001140        2470.23
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18253, the second kernel time is 677.71877 
+the read time is 0.00791, the write time is 0.02987, the kernel time is 15.97319, the second kernel time is 630.69027 
+the boundary time is 11.24040, the iteration time is 17.27045 
+        78000         0.001130        2501.37
+the read time is 0.00833, the write time is 0.02988, the kernel time is 17.18156, the second kernel time is 686.32548 
+the read time is 0.00792, the write time is 0.02989, the kernel time is 15.97333, the second kernel time is 638.68163 
+the boundary time is 11.23964, the iteration time is 17.26984 
+        79000         0.001120        2532.44
+the read time is 0.00833, the write time is 0.02988, the kernel time is 17.18215, the second kernel time is 694.93153 
+the read time is 0.00791, the write time is 0.02989, the kernel time is 15.97327, the second kernel time is 646.67465 
+the boundary time is 11.23705, the iteration time is 17.27045 
+        80000         0.001110        2563.51
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18187, the second kernel time is 703.53856 
+the read time is 0.00791, the write time is 0.02988, the kernel time is 15.97257, the second kernel time is 654.66711 
+the boundary time is 11.29289, the iteration time is 17.27925 
+        81000         0.001100        2594.66
+the read time is 0.00833, the write time is 0.02989, the kernel time is 17.18173, the second kernel time is 712.14430 
+the read time is 0.00791, the write time is 0.02988, the kernel time is 15.97335, the second kernel time is 662.65894 
+the boundary time is 11.24324, the iteration time is 17.26854 
+        82000         0.001090        2625.74
+the read time is 0.00834, the write time is 0.02989, the kernel time is 17.18014, the second kernel time is 720.75024 
+the read time is 0.00792, the write time is 0.02989, the kernel time is 15.97332, the second kernel time is 670.65084 
+the boundary time is 11.24472, the iteration time is 17.27932 
+        83000         0.001080        2656.82
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.18114, the second kernel time is 729.35630 
+the read time is 0.00791, the write time is 0.02988, the kernel time is 15.97293, the second kernel time is 678.64265 
+the boundary time is 11.23995, the iteration time is 17.26757 
+        84000         0.001070        2687.92
+the read time is 0.00834, the write time is 0.02990, the kernel time is 17.18028, the second kernel time is 737.96201 
+the read time is 0.00791, the write time is 0.02988, the kernel time is 15.97249, the second kernel time is 686.63463 
+the boundary time is 11.24606, the iteration time is 17.26840 
+        85000         0.001060        2719.12
+the read time is 0.00832, the write time is 0.02989, the kernel time is 17.17946, the second kernel time is 746.56739 
+the read time is 0.00793, the write time is 0.02988, the kernel time is 15.97220, the second kernel time is 694.62656 
+the boundary time is 11.23992, the iteration time is 17.26691 
+        86000         0.001051        2750.19
+the read time is 0.00833, the write time is 0.02988, the kernel time is 17.17957, the second kernel time is 755.17286 
+the read time is 0.00791, the write time is 0.02993, the kernel time is 15.97183, the second kernel time is 702.61758 
+the boundary time is 11.24499, the iteration time is 17.31094 
+        87000         0.001041        2781.33
+the read time is 0.00833, the write time is 0.02988, the kernel time is 17.17966, the second kernel time is 763.77864 
+the read time is 0.00792, the write time is 0.02987, the kernel time is 15.97114, the second kernel time is 710.60922 
+the boundary time is 11.21769, the iteration time is 17.26762 
+        88000         0.001032        2812.34
+the read time is 0.00833, the write time is 0.02988, the kernel time is 17.17814, the second kernel time is 772.38439 
+the read time is 0.00791, the write time is 0.02987, the kernel time is 15.97185, the second kernel time is 718.60025 
+the boundary time is 11.21850, the iteration time is 17.49044 
+        89000         0.001022        2843.56
+the read time is 0.00834, the write time is 0.02988, the kernel time is 17.17829, the second kernel time is 780.98910 
+the read time is 0.00794, the write time is 0.02988, the kernel time is 15.97107, the second kernel time is 726.59142 
+the boundary time is 11.21440, the iteration time is 17.26692 
+        90000         0.001013        2874.55
+the read time is 0.00835, the write time is 0.02989, the kernel time is 17.17872, the second kernel time is 789.59367 
+the read time is 0.00790, the write time is 0.02987, the kernel time is 15.97121, the second kernel time is 734.58247 
+the boundary time is 11.24362, the iteration time is 17.26842 
+        91000         0.001004        2905.58
+the read time is 0.00834, the write time is 0.02989, the kernel time is 17.17815, the second kernel time is 798.19924 
+the read time is 0.00790, the write time is 0.02987, the kernel time is 15.97085, the second kernel time is 742.57348 
+the boundary time is 11.21195, the iteration time is 17.26721 
+        92000         0.000995        2936.57
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume  1885022.7 m3
+       Volume change  1885022.7 m3
+Final water coverage      0.058 
+    Mean water depth       17.3 mm
+     Max water depth     1004.6 mm 
+     Iteration limit 0
+            Run Time    2954.38 s
