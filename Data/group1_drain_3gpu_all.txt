@@ -1,0 +1,838 @@
+                                                                   
+                                                                   
+WDPM_drain 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program drains an ArcGIS ASCII file of water runoff
+from the lowest point in the DEM, which acts as a drain
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: drain
+                     DEM file: basin5.asc
+                   Water file: water_b5.asc
+                  Output file: drain_b5
+                 Scratch file: NULL
+          Elevation tolerance: 0.1 mm
+              Drain tolerance: 0.1 m3
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 471
+                         NROWS 482
+                     XLLCORNER  313420.0
+                     YLLCORNER 5632511.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+157 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         157                  155            0   
+1 :         157                  155            156   
+2 :         159                  157            312   
+           
+     Existing water file found
+0 468 0 155 
+471 1 468 156 311 
+471 2 468 312 469 
+154                
+                 Basin summary
+         Basin area: 11003600.0 m2
+     Initial volume:   110036.0 m3
+       Drain column: 468
+          Drain row: 327
+  Min DEM elevation:    491.599 m
+               
+            Doing calculations
+     iterations        max diff      vol change      water left        run time
+                         (m)            (m3)             (m3)               (s)
+        1000         1.115612           6760.7           103275.3           0.34
+        2000         0.103308           1786.5           101488.8           0.67
+        3000         0.098234           1331.9           100156.9           1.00
+        4000         0.111890            964.2            99192.6           1.33
+        5000         0.137364            732.5            98460.2           1.66
+        6000         0.100064            504.0            97956.1           2.00
+        7000         0.100418            265.7            97690.4           2.34
+        8000         0.058686             91.6            97598.8           2.69
+        9000         0.017785             18.3            97580.5           3.03
+        10000         0.002579              2.5            97578.0           3.37
+        11000         0.000292              0.3            97577.7           3.72
+        12000         0.000035              0.1            97577.6           4.07
+                     
+              WDPM run summary
+      Initial volume   110036.0 m3
+        Final volume    97577.6 m3
+       Volume change    12458.4 m3
+      Volume drained    12570.0 m3
+Final water coverage      0.101 
+    Mean water depth       87.4 mm
+       Depth drained        1.1 mm 
+     Max water depth     1038.2 mm 
+     Iteration limit 0
+            Run Time       4.26 s
+                                                                   
+                                                                   
+WDPM_drain 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program drains an ArcGIS ASCII file of water runoff
+from the lowest point in the DEM, which acts as a drain
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: drain
+                     DEM file: basin4_5m.asc
+                   Water file: water_b4.asc
+                  Output file: drain_b4.asc
+                 Scratch file: NULL
+          Elevation tolerance: 0.1 mm
+              Drain tolerance: 0.1 m3
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 2520
+                         NROWS 1833
+                     XLLCORNER  301740.0
+                     YLLCORNER 5633271.0
+                      CELLSIZE       5.0
+                  NODATA_VALUE   -9999.0
+           Setting array sizes
+           
+841 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         841                  839            0   
+1 :         841                  839            840   
+2 :         840                  838            1680   
+           
+     Existing water file found
+0 2519 0 839 
+2520 1 2519 840 1679 
+2520 2 2519 1680 2518 
+837                
+                 Basin summary
+         Basin area: 37867500.0 m2
+     Initial volume:   189337.5 m3
+       Drain column: 2519
+          Drain row: 1489
+  Min DEM elevation:    501.056 m
+               
+            Doing calculations
+     iterations        max diff      vol change      water left        run time
+                         (m)            (m3)             (m3)               (s)
+        1000         1.134807            584.7           188752.8           1.19
+        2000         0.039769             16.5           188736.2           2.32
+        3000         0.005088              1.9           188734.3           3.46
+        4000         0.000829              0.2           188734.1           4.61
+        5000         0.000801              0.0           188734.1           5.75
+                     
+              WDPM run summary
+      Initial volume   189337.5 m3
+        Final volume   188734.1 m3
+       Volume change      603.4 m3
+      Volume drained      631.8 m3
+Final water coverage      0.082 
+    Mean water depth       61.1 mm
+       Depth drained        0.0 mm 
+     Max water depth      939.9 mm 
+     Iteration limit 0
+            Run Time       8.08 s
+                                                                   
+                                                                   
+WDPM_drain 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program drains an ArcGIS ASCII file of water runoff
+from the lowest point in the DEM, which acts as a drain
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: drain
+                     DEM file: culvert_basin1_5m.asc
+                   Water file: water_cul.asc
+                  Output file: drain_cul.asc
+                 Scratch file: NULL
+          Elevation tolerance: 0.1 mm
+              Drain tolerance: 0.1 m3
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 3794
+                         NROWS 3986
+                     XLLCORNER  289240.0
+                     YLLCORNER 5645571.0
+                      CELLSIZE       5.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+1267 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1267                  1265            0   
+1 :         1267                  1265            1266   
+2 :         1262                  1260            2532   
+           
+     Existing water file found
+0 3601 0 1265 
+3794 1 3601 1266 2531 
+3794 2 3601 2532 3792 
+1067                
+                 Basin summary
+         Basin area: 234321850.0 m2
+     Initial volume:   702965.6 m3
+       Drain column: 3601
+          Drain row: 3724
+  Min DEM elevation:    515.829 m
+               
+            Doing calculations
+     iterations        max diff      vol change      water left        run time
+                         (m)            (m3)             (m3)               (s)
+        1000         0.045504             20.5           702945.1           3.68
+        2000         0.000937              0.0           702945.1           7.19
+                     
+              WDPM run summary
+      Initial volume   702965.6 m3
+        Final volume   702945.1 m3
+       Volume change       20.5 m3
+      Volume drained       21.6 m3
+Final water coverage      0.084 
+    Mean water depth       35.9 mm
+       Depth drained        0.0 mm 
+     Max water depth      657.2 mm 
+     Iteration limit 0
+            Run Time      14.53 s
+                                                                   
+                                                                   
+WDPM_drain 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program drains an ArcGIS ASCII file of water runoff
+from the lowest point in the DEM, which acts as a drain
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: drain
+                     DEM file: smithcreek_dem1m_sb5.asc
+                   Water file: water_s.asc
+                  Output file: drain_sb5.asc
+                 Scratch file: NULL
+          Elevation tolerance: 0.1 mm
+              Drain tolerance: 0.1 m3
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         ncols 4712
+                         nrows 4826
+                     xllcorner  313418.0
+                     yllcorner 5632507.0
+                      cellsize       1.0
+                  NODATA_value   -9999.0
+           Setting array sizes
+           
+1573 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1573                  1571            0   
+1 :         1573                  1571            1572   
+2 :         1568                  1566            3144   
+           
+     Existing water file found
+0 4679 0 1571 
+4712 1 4679 1572 3143 
+4712 2 4679 3144 4710 
+1533                
+                 Basin summary
+         Basin area: 11003599.0 m2
+     Initial volume:    22007.2 m3
+       Drain column: 4679
+          Drain row: 3274
+  Min DEM elevation:    491.520 m
+               
+            Doing calculations
+     iterations        max diff      vol change      water left        run time
+                         (m)            (m3)             (m3)               (s)
+        1000         0.291888             55.2            21952.0           4.37
+        2000         0.036864             15.3            21936.7           8.50
+        3000         0.021548             11.2            21925.4          12.55
+        4000         0.013990              9.2            21916.2          16.64
+        5000         0.009549              7.7            21908.6          20.81
+        6000         0.007065              6.8            21901.7          24.91
+        7000         0.006594              6.3            21895.4          29.09
+        8000         0.004732              5.9            21889.5          33.28
+        9000         0.004605              5.6            21883.9          37.45
+        10000         0.003884              5.3            21878.6          41.66
+        11000         0.003578              5.1            21873.6          45.90
+        12000         0.004230              4.9            21868.7          50.14
+        13000         0.003326              4.8            21863.9          54.31
+        14000         0.004601              4.6            21859.3          58.48
+        15000         0.002876              4.5            21854.7          62.65
+        16000         0.003031              4.4            21850.3          66.82
+        17000         0.003210              4.3            21846.0          71.07
+        18000         0.002803              4.2            21841.9          75.49
+        19000         0.002824              4.1            21837.7          79.73
+        20000         0.003292              4.0            21833.7          83.89
+        21000         0.002898              3.9            21829.8          88.13
+        22000         0.002846              3.9            21825.9          92.30
+        23000         0.002738              3.8            21822.1          96.47
+        24000         0.002682              3.7            21818.4         100.64
+        25000         0.002782              3.7            21814.7         104.81
+        26000         0.002640              3.6            21811.1         109.87
+        27000         0.002623              3.5            21807.6         114.26
+        28000         0.002749              3.4            21804.2         118.43
+        29000         0.002946              3.4            21800.8         122.65
+        30000         0.002816              3.3            21797.5         126.82
+        31000         0.003027              3.3            21794.2         131.06
+        32000         0.002816              3.2            21791.0         135.30
+        33000         0.002635              3.1            21787.9         139.46
+        34000         0.002570              3.1            21784.8         143.64
+        35000         0.002502              3.0            21781.8         147.81
+        36000         0.003253              3.0            21778.9         152.37
+        37000         0.002318              2.9            21776.0         156.56
+        38000         0.002413              2.9            21773.1         160.73
+        39000         0.002267              2.8            21770.3         164.89
+        40000         0.002391              2.7            21767.6         169.11
+        41000         0.002412              2.7            21764.9         173.28
+        42000         0.002535              2.6            21762.2         177.52
+        43000         0.002388              2.6            21759.6         181.77
+        44000         0.002288              2.5            21757.1         185.94
+        45000         0.002469              2.5            21754.6         190.24
+        46000         0.002345              2.5            21752.1         194.41
+        47000         0.002340              2.4            21749.7         198.57
+        48000         0.002666              2.4            21747.4         202.74
+        49000         0.002362              2.3            21745.1         206.91
+        50000         0.003037              2.2            21742.9         211.08
+        51000         0.012356              2.1            21740.8         215.30
+        52000         0.012138              2.0            21738.7         219.46
+        53000         0.013689              1.9            21736.8         223.70
+        54000         0.007905              1.8            21735.0         227.87
+        55000         0.005165              1.8            21733.2         232.49
+        56000         0.003106              1.7            21731.5         236.74
+        57000         0.001775              1.7            21729.8         240.91
+        58000         0.001837              1.6            21728.2         245.08
+        59000         0.001906              1.5            21726.7         249.24
+        60000         0.001693              1.5            21725.2         253.41
+        61000         0.001509              1.4            21723.8         257.58
+        62000         0.001494              1.3            21722.5         261.75
+        63000         0.001568              1.3            21721.2         265.96
+        64000         0.001409              1.2            21720.0         270.21
+        65000         0.001397              1.2            21718.9         274.38
+        66000         0.001274              1.1            21717.8         278.62
+        67000         0.001004              1.1            21716.7         282.79
+        68000         0.001010              1.0            21715.7         286.96
+        69000         0.000896              1.0            21714.7         291.13
+        70000         0.000914              0.9            21713.8         295.30
+        71000         0.000852              0.9            21712.9         299.47
+        72000         0.000901              0.9            21712.0         303.64
+        73000         0.000926              0.8            21711.2         307.81
+        74000         0.000935              0.8            21710.4         312.02
+        75000         0.000932              0.8            21709.7         316.28
+        76000         0.000922              0.7            21708.9         320.45
+        77000         0.000906              0.7            21708.2         324.69
+        78000         0.000886              0.7            21707.5         328.86
+        79000         0.000864              0.7            21706.8         333.03
+        80000         0.000832              0.7            21706.1         337.20
+        81000         0.000786              0.7            21705.5         341.37
+        82000         0.001021              0.6            21704.8         345.54
+        83000         0.001179              0.6            21704.2         349.71
+        84000         0.001000              0.6            21703.6         354.60
+        85000         0.000724              0.6            21703.0         358.82
+        86000         0.000707              0.6            21702.4         362.98
+        87000         0.000688              0.6            21701.8         367.22
+        88000         0.000673              0.6            21701.3         371.47
+        89000         0.000654              0.6            21700.7         375.64
+        90000         0.000626              0.5            21700.2         379.81
+        91000         0.000627              0.5            21699.6         383.98
+        92000         0.000545              0.5            21699.1         388.15
+        93000         0.000570              0.5            21698.6         392.37
+        94000         0.000586              0.5            21698.1         396.53
+        95000         0.000510              0.5            21697.6         400.70
+        96000         0.000576              0.5            21697.1         404.91
+        97000         0.000561              0.5            21696.6         409.08
+        98000         0.000565              0.5            21696.1         413.32
+        99000         0.000675              0.5            21695.6         417.56
+        100000         0.000631              0.5            21695.2         421.72
+        101000         0.000621              0.5            21694.7         425.89
+        102000         0.000598              0.5            21694.2         430.06
+        103000         0.000502              0.5            21693.8         434.23
+        104000         0.000524              0.5            21693.3         438.38
+        105000         0.000515              0.5            21692.9         442.54
+        106000         0.000503              0.4            21692.4         446.69
+        107000         0.000488              0.4            21692.0         450.86
+        108000         0.000524              0.4            21691.5         455.01
+        109000         0.000522              0.4            21691.1         459.22
+        110000         0.000508              0.4            21690.7         463.36
+        111000         0.000492              0.4            21690.2         467.57
+        112000         0.000529              0.4            21689.8         471.75
+        113000         0.000474              0.4            21689.4         475.91
+        114000         0.000490              0.4            21689.0         480.06
+        115000         0.000515              0.4            21688.5         484.20
+        116000         0.000505              0.4            21688.1         488.34
+        117000         0.000485              0.4            21687.7         492.49
+        118000         0.000511              0.4            21687.3         496.62
+        119000         0.000479              0.4            21686.9         500.76
+        120000         0.000471              0.4            21686.5         504.96
+        121000         0.000484              0.4            21686.1         509.27
+        122000         0.000482              0.4            21685.7         513.55
+        123000         0.000468              0.4            21685.3         517.68
+        124000         0.000505              0.4            21684.9         521.80
+        125000         0.000493              0.4            21684.5         525.92
+        126000         0.000481              0.4            21684.1         530.03
+        127000         0.000448              0.4            21683.7         534.15
+        128000         0.000445              0.4            21683.3         538.26
+        129000         0.000471              0.4            21682.9         542.37
+        130000         0.000484              0.4            21682.5         546.48
+        131000         0.000478              0.4            21682.1         550.67
+        132000         0.000455              0.4            21681.7         555.28
+        133000         0.000458              0.4            21681.4         559.45
+        134000         0.000470              0.4            21681.0         563.55
+        135000         0.000513              0.4            21680.6         567.64
+        136000         0.000552              0.4            21680.2         571.73
+        137000         0.000461              0.4            21679.8         575.82
+        138000         0.000466              0.4            21679.5         579.90
+        139000         0.000445              0.4            21679.1         583.99
+        140000         0.000474              0.4            21678.7         588.07
+        141000         0.001117              0.4            21678.3         592.19
+        142000         0.000771              0.4            21678.0         596.26
+        143000         0.000449              0.4            21677.6         600.37
+        144000         0.000447              0.4            21677.2         604.43
+        145000         0.000448              0.4            21676.9         608.56
+        146000         0.000450              0.4            21676.5         612.64
+        147000         0.000449              0.4            21676.1         616.69
+        148000         0.000444              0.4            21675.8         620.75
+        149000         0.000481              0.4            21675.4         624.80
+        150000         0.000452              0.4            21675.0         628.85
+        151000         0.000491              0.4            21674.7         632.91
+        152000         0.000470              0.4            21674.3         636.95
+        153000         0.000490              0.4            21674.0         640.99
+        154000         0.000446              0.4            21673.6         645.04
+        155000         0.000454              0.4            21673.2         649.08
+        156000         0.000455              0.4            21672.9         653.19
+        157000         0.000420              0.4            21672.5         657.22
+        158000         0.000415              0.4            21672.2         661.26
+        159000         0.000415              0.4            21671.8         665.28
+        160000         0.000414              0.4            21671.5         669.63
+        161000         0.000437              0.4            21671.1         674.25
+        162000         0.000445              0.4            21670.8         678.26
+        163000         0.000435              0.4            21670.4         682.28
+        164000         0.000434              0.4            21670.1         686.29
+        165000         0.000468              0.3            21669.7         690.30
+        166000         0.000451              0.3            21669.4         694.31
+        167000         0.000440              0.3            21669.0         698.31
+        168000         0.000439              0.3            21668.7         702.38
+        169000         0.000420              0.3            21668.3         706.38
+        170000         0.000467              0.3            21668.0         711.21
+        171000         0.000478              0.3            21667.6         715.30
+        172000         0.000481              0.3            21667.3         719.31
+        173000         0.000519              0.3            21666.9         723.33
+        174000         0.000431              0.3            21666.6         727.34
+        175000         0.000404              0.3            21666.3         731.36
+        176000         0.000401              0.3            21665.9         735.37
+        177000         0.000415              0.3            21665.6         739.39
+        178000         0.000395              0.3            21665.2         743.40
+        179000         0.000394              0.3            21664.9         747.48
+        180000         0.000424              0.3            21664.6         751.50
+        181000         0.000394              0.3            21664.2         755.52
+        182000         0.000394              0.3            21663.9         759.54
+        183000         0.000393              0.3            21663.6         763.55
+        184000         0.000393              0.3            21663.2         767.56
+        185000         0.000393              0.3            21662.9         771.58
+        186000         0.000441              0.3            21662.6         775.59
+        187000         0.000415              0.3            21662.2         779.61
+        188000         0.000422              0.3            21661.9         783.62
+        189000         0.000462              0.3            21661.6         787.64
+        190000         0.000477              0.3            21661.3         791.66
+        191000         0.000395              0.3            21660.9         795.74
+        192000         0.000408              0.3            21660.6         799.75
+        193000         0.000404              0.3            21660.3         803.77
+        194000         0.000389              0.3            21660.0         807.78
+        195000         0.000388              0.3            21659.7         811.80
+        196000         0.000385              0.3            21659.3         815.81
+        197000         0.000383              0.3            21659.0         819.83
+        198000         0.000400              0.3            21658.7         823.84
+        199000         0.000409              0.3            21658.4         827.85
+        200000         0.000387              0.3            21658.1         831.88
+        201000         0.000380              0.3            21657.8         835.94
+        202000         0.000428              0.3            21657.4         839.96
+        203000         0.000364              0.3            21657.1         844.04
+        204000         0.000364              0.3            21656.8         848.06
+        205000         0.000363              0.3            21656.5         852.07
+        206000         0.000363              0.3            21656.2         856.09
+        207000         0.000362              0.3            21655.9         860.11
+        208000         0.000361              0.3            21655.6         864.12
+        209000         0.000361              0.3            21655.3         868.14
+        210000         0.000372              0.3            21655.0         880.74
+        211000         0.000374              0.3            21654.7         885.90
+        212000         0.000371              0.3            21654.4         890.11
+        213000         0.000382              0.3            21654.1         894.12
+        214000         0.000391              0.3            21653.8         898.20
+        215000         0.000399              0.3            21653.5         902.22
+        216000         0.000512              0.3            21653.2         906.24
+        217000         0.000403              0.3            21652.9         910.26
+        218000         0.000395              0.3            21652.6         914.27
+        219000         0.000405              0.3            21652.3         918.29
+        220000         0.000414              0.3            21652.0         922.31
+        221000         0.000416              0.3            21651.7         926.34
+        222000         0.000418              0.3            21651.4         930.35
+        223000         0.000421              0.3            21651.1         934.37
+        224000         0.000422              0.3            21650.9         938.38
+        225000         0.000424              0.3            21650.6         942.40
+        226000         0.000443              0.3            21650.3         946.47
+        227000         0.000428              0.3            21650.0         950.49
+        228000         0.000459              0.3            21649.7         954.50
+        229000         0.000419              0.3            21649.4         958.52
+        230000         0.000384              0.3            21649.2         962.55
+        231000         0.000401              0.3            21648.9         966.56
+        232000         0.000417              0.3            21648.6         970.58
+        233000         0.000423              0.3            21648.3         974.60
+        234000         0.000402              0.3            21648.1         978.61
+        235000         0.000405              0.3            21647.8         982.63
+        236000         0.000404              0.3            21647.5         986.64
+        237000         0.000400              0.3            21647.2         990.72
+        238000         0.000393              0.3            21647.0         994.74
+        239000         0.000382              0.3            21646.7         998.76
+        240000         0.000374              0.3            21646.4        1003.12
+        241000         0.000371              0.3            21646.2        1007.14
+        242000         0.000373              0.3            21645.9        1011.15
+        243000         0.000364              0.3            21645.6        1015.17
+        244000         0.000359              0.3            21645.4        1019.18
+        245000         0.000355              0.3            21645.1        1023.20
+        246000         0.000351              0.3            21644.8        1027.22
+        247000         0.000349              0.3            21644.6        1031.24
+        248000         0.000354              0.3            21644.3        1035.25
+        249000         0.000344              0.3            21644.0        1039.33
+        250000         0.000342              0.3            21643.8        1043.91
+        251000         0.000340              0.3            21643.5        1048.11
+        252000         0.000338              0.3            21643.3        1052.12
+        253000         0.000336              0.3            21643.0        1056.14
+        254000         0.000334              0.3            21642.8        1060.16
+        255000         0.000332              0.3            21642.5        1064.17
+        256000         0.000328              0.3            21642.2        1068.19
+        257000         0.000323              0.3            21642.0        1072.21
+        258000         0.000374              0.3            21641.7        1076.22
+        259000         0.000328              0.2            21641.5        1080.30
+        260000         0.000340              0.2            21641.2        1084.34
+        261000         0.000326              0.2            21641.0        1088.40
+        262000         0.000325              0.2            21640.8        1092.39
+        263000         0.000322              0.2            21640.5        1096.39
+        264000         0.000320              0.2            21640.3        1100.38
+        265000         0.000318              0.2            21640.0        1104.37
+        266000         0.000318              0.2            21639.8        1108.37
+        267000         0.000317              0.2            21639.5        1112.36
+        268000         0.000316              0.2            21639.3        1116.35
+        269000         0.000316              0.2            21639.1        1120.85
+        270000         0.000316              0.2            21638.8        1124.92
+        271000         0.000316              0.2            21638.6        1128.91
+        272000         0.000315              0.2            21638.4        1132.97
+        273000         0.000314              0.2            21638.1        1136.96
+        274000         0.000313              0.2            21637.9        1140.96
+        275000         0.000311              0.2            21637.7        1144.95
+        276000         0.000309              0.2            21637.4        1148.95
+        277000         0.000308              0.2            21637.2        1152.94
+        278000         0.000307              0.2            21637.0        1156.93
+        279000         0.000310              0.2            21636.8        1161.16
+        280000         0.000304              0.2            21636.5        1165.15
+        281000         0.000300              0.2            21636.3        1169.14
+        282000         0.000296              0.2            21636.1        1173.13
+        283000         0.000297              0.2            21635.9        1177.13
+        284000         0.000293              0.2            21635.6        1181.18
+        285000         0.000285              0.2            21635.4        1185.17
+        286000         0.000307              0.2            21635.2        1189.17
+        287000         0.000278              0.2            21635.0        1193.16
+        288000         0.000290              0.2            21634.8        1197.15
+        289000         0.000295              0.2            21634.6        1201.16
+        290000         0.000276              0.2            21634.4        1205.16
+        291000         0.000287              0.2            21634.2        1209.16
+        292000         0.000281              0.2            21633.9        1213.15
+        293000         0.000325              0.2            21633.7        1217.14
+        294000         0.000297              0.2            21633.5        1221.13
+        295000         0.000283              0.2            21633.3        1225.12
+        296000         0.000283              0.2            21633.1        1229.17
+        297000         0.000283              0.2            21632.9        1233.17
+        298000         0.000299              0.2            21632.7        1237.16
+        299000         0.000325              0.2            21632.5        1242.05
+        300000         0.000340              0.2            21632.3        1246.05
+        301000         0.000351              0.2            21632.1        1250.04
+        302000         0.000359              0.2            21631.9        1254.03
+        303000         0.000365              0.2            21631.7        1258.02
+        304000         0.000370              0.2            21631.5        1262.01
+        305000         0.000374              0.2            21631.3        1266.00
+        306000         0.000377              0.2            21631.1        1269.99
+        307000         0.000380              0.2            21630.9        1274.05
+        308000         0.000381              0.2            21630.8        1278.04
+        309000         0.000382              0.2            21630.6        1282.05
+        310000         0.000383              0.2            21630.4        1286.47
+        311000         0.000383              0.2            21630.2        1290.46
+        312000         0.000382              0.2            21630.0        1294.45
+        313000         0.000380              0.2            21629.8        1298.44
+        314000         0.000379              0.2            21629.6        1302.44
+        315000         0.000377              0.2            21629.4        1306.43
+        316000         0.000374              0.2            21629.3        1310.42
+        317000         0.000371              0.2            21629.1        1314.41
+        318000         0.000368              0.2            21628.9        1318.40
+        319000         0.000365              0.2            21628.7        1323.02
+        320000         0.000361              0.2            21628.6        1327.02
+        321000         0.000357              0.2            21628.4        1331.01
+        322000         0.000353              0.2            21628.2        1334.99
+        323000         0.000349              0.2            21628.0        1338.97
+        324000         0.000340              0.2            21627.9        1342.95
+        325000         0.000313              0.2            21627.7        1346.93
+        326000         0.000317              0.2            21627.5        1350.91
+        327000         0.000317              0.2            21627.4        1354.90
+        328000         0.000311              0.2            21627.2        1358.87
+        329000         0.000306              0.2            21627.0        1370.71
+        330000         0.000278              0.2            21626.9        1375.75
+        331000         0.000289              0.2            21626.7        1379.97
+        332000         0.000259              0.2            21626.5        1383.96
+        333000         0.000252              0.2            21626.4        1387.94
+        334000         0.000252              0.2            21626.2        1391.92
+        335000         0.000253              0.2            21626.1        1395.90
+        336000         0.000255              0.2            21625.9        1399.88
+        337000         0.000256              0.2            21625.8        1403.86
+        338000         0.000257              0.2            21625.6        1407.84
+        339000         0.000257              0.2            21625.4        1411.82
+        340000         0.000256              0.2            21625.3        1415.80
+        341000         0.000256              0.1            21625.1        1419.78
+        342000         0.000256              0.1            21625.0        1423.82
+        343000         0.000255              0.1            21624.8        1427.80
+        344000         0.000255              0.1            21624.7        1431.79
+        345000         0.000255              0.1            21624.6        1435.77
+        346000         0.000255              0.1            21624.4        1439.75
+        347000         0.000255              0.1            21624.3        1443.74
+        348000         0.000254              0.1            21624.1        1447.72
+        349000         0.000253              0.1            21624.0        1451.71
+        350000         0.000251              0.1            21623.8        1455.70
+        351000         0.000249              0.1            21623.7        1459.68
+        352000         0.000242              0.1            21623.6        1463.66
+        353000         0.000224              0.1            21623.4        1467.64
+        354000         0.000223              0.1            21623.3        1471.68
+        355000         0.000221              0.1            21623.2        1475.66
+        356000         0.000219              0.1            21623.0        1479.64
+        357000         0.000218              0.1            21622.9        1483.62
+        358000         0.000216              0.1            21622.7        1487.60
+        359000         0.000214              0.1            21622.6        1491.82
+        360000         0.000213              0.1            21622.5        1495.81
+        361000         0.000211              0.1            21622.4        1499.79
+        362000         0.000210              0.1            21622.2        1503.77
+        363000         0.000209              0.1            21622.1        1507.75
+        364000         0.000207              0.1            21622.0        1511.73
+        365000         0.000205              0.1            21621.8        1515.70
+        366000         0.000210              0.1            21621.7        1519.74
+        367000         0.000215              0.1            21621.6        1523.72
+        368000         0.000219              0.1            21621.5        1527.71
+        369000         0.000223              0.1            21621.3        1531.70
+        370000         0.000227              0.1            21621.2        1535.68
+        371000         0.000231              0.1            21621.1        1539.66
+        372000         0.000234              0.1            21621.0        1543.64
+        373000         0.000237              0.1            21620.8        1547.62
+        374000         0.000239              0.1            21620.7        1551.60
+        375000         0.000242              0.1            21620.6        1555.58
+        376000         0.000244              0.1            21620.5        1559.56
+        377000         0.000246              0.1            21620.4        1563.53
+        378000         0.000247              0.1            21620.2        1567.57
+        379000         0.000249              0.1            21620.1        1571.58
+        380000         0.000250              0.1            21620.0        1575.56
+        381000         0.000250              0.1            21619.9        1579.54
+        382000         0.000251              0.1            21619.8        1583.52
+        383000         0.000252              0.1            21619.7        1587.50
+        384000         0.000252              0.1            21619.6        1591.48
+        385000         0.000252              0.1            21619.4        1595.45
+        386000         0.000249              0.1            21619.3        1599.43
+        387000         0.000248              0.1            21619.2        1603.41
+        388000         0.000244              0.1            21619.1        1607.39
+        389000         0.000313              0.1            21619.0        1611.44
+        390000         0.000267              0.1            21618.9        1615.43
+        391000         0.000215              0.1            21618.8        1619.42
+        392000         0.000226              0.1            21618.7        1623.39
+        393000         0.000226              0.1            21618.6        1627.39
+        394000         0.000222              0.1            21618.5        1631.37
+        395000         0.000229              0.1            21618.4        1635.35
+        396000         0.000232              0.1            21618.3        1639.33
+        397000         0.000233              0.1            21618.2        1643.31
+        398000         0.000234              0.1            21618.1        1647.29
+        399000         0.000234              0.1            21618.0        1651.41
+        400000         0.000230              0.1            21617.9        1655.39
+        401000         0.000220              0.1            21617.8        1659.43
+        402000         0.000212              0.1            21617.7        1663.41
+                     
+              WDPM run summary
+      Initial volume    22007.2 m3
+        Final volume    21617.7 m3
+       Volume change      389.5 m3
+      Volume drained      389.8 m3
+Final water coverage      0.056 
+    Mean water depth       34.9 mm
+       Depth drained        0.0 mm 
+     Max water depth      550.0 mm 
+     Iteration limit 0
+            Run Time    1672.78 s
+                                                                   
+                                                                   
+WDPM_drain 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program drains an ArcGIS ASCII file of water runoff
+from the lowest point in the DEM, which acts as a drain
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: drain
+                     DEM file: patched_YQ.asc
+                   Water file: water_p.asc
+                  Output file: drain_p.asc
+                 Scratch file: NULL
+          Elevation tolerance: 0.1 mm
+              Drain tolerance: 0.1 m3
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 5877
+                         NROWS 5519
+                     XLLCORNER  572217.0
+                     YLLCORNER 5760951.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -10000.0
+           Setting array sizes
+           
+1960 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1960                  1958            0   
+1 :         1960                  1958            1959   
+2 :         1959                  1957            3918   
+           
+     Existing water file found
+0 1524 0 1958 
+1524 1 1524 1959 3917 
+5877 2 1524 3918 5875 
+5877                
+                 Basin summary
+         Basin area: 1885022700.0 m2
+     Initial volume:  3770045.1 m3
+       Drain column: 1524
+          Drain row: 155
+  Min DEM elevation:    530.340 m
+               
+            Doing calculations
+     iterations        max diff      vol change      water left        run time
+                         (m)            (m3)             (m3)               (s)
+        1000         0.591789            652.4          3769392.7           5.61
+        2000         0.000974              0.0          3769392.7          10.88
+                     
+              WDPM run summary
+      Initial volume  3770045.1 m3
+        Final volume  3769392.7 m3
+       Volume change      652.4 m3
+      Volume drained      711.6 m3
+Final water coverage      0.066 
+    Mean water depth       30.1 mm
+       Depth drained        0.0 mm 
+     Max water depth     1650.0 mm 
+     Iteration limit 0
+            Run Time      26.68 s
