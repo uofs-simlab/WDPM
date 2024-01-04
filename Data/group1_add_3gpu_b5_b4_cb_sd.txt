@@ -1,0 +1,653 @@
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: basin5.asc
+                   Water file: NULL
+                  Output file: water_b5.asc
+                 Scratch file: NULL
+                  Water added: 10.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 471
+                         NROWS 482
+                     XLLCORNER  313420.0
+                     YLLCORNER 5632511.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+157 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         157                  155            0   
+1 :         157                  155            156   
+2 :         159                  157            312   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.815386           0.55
+        2000         0.144914           1.21
+        3000         0.092338           1.95
+        4000         0.086082           2.72
+        5000         0.075334           3.46
+        6000         0.063516           4.21
+        7000         0.063792           5.01
+        8000         0.073254           5.81
+        9000         0.078455           6.60
+        10000         0.067549           7.39
+        11000         0.060039           8.19
+        12000         0.056021           9.00
+        13000         0.040620           9.80
+        14000         0.045961          10.59
+        15000         0.059637          11.40
+        16000         0.065970          12.22
+        17000         0.054155          13.03
+        18000         0.040656          13.83
+        19000         0.039091          14.62
+        20000         0.040107          15.43
+        21000         0.028840          16.26
+        22000         0.029113          17.10
+        23000         0.019482          17.93
+        24000         0.012284          18.76
+        25000         0.007291          19.56
+        26000         0.004351          20.35
+        27000         0.003248          21.15
+        28000         0.002146          21.95
+        29000         0.001317          22.74
+        30000         0.000718          23.53
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume   110036.0 m3
+       Volume change   110036.0 m3
+Final water coverage      0.104 
+    Mean water depth       96.5 mm
+     Max water depth     1115.6 mm 
+     Iteration limit 0
+            Run Time      23.75 s
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: basin4_5m.asc
+                   Water file: NULL
+                  Output file: water_b4.asc
+                 Scratch file: NULL
+                  Water added: 5.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 2520
+                         NROWS 1833
+                     XLLCORNER  301740.0
+                     YLLCORNER 5633271.0
+                      CELLSIZE       5.0
+                  NODATA_VALUE   -9999.0
+           Setting array sizes
+           
+841 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         841                  839            0   
+1 :         841                  839            840   
+2 :         840                  838            1680   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.935246           2.51
+        2000         0.209548           5.22
+        3000         0.264450           8.06
+        4000         0.125308          11.02
+        5000         0.092220          13.98
+        6000         0.063083          17.00
+        7000         0.059685          20.09
+        8000         0.063413          23.13
+        9000         0.054351          26.19
+        10000         0.047679          29.30
+        11000         0.051622          32.84
+        12000         0.057833          36.00
+        13000         0.052482          39.04
+        14000         0.043759          42.19
+        15000         0.051069          45.33
+        16000         0.034487          48.36
+        17000         0.044959          51.40
+        18000         0.027365          54.44
+        19000         0.017897          57.55
+        20000         0.016530          60.62
+        21000         0.016617          63.69
+        22000         0.016259          66.74
+        23000         0.015962          69.80
+        24000         0.014357          73.68
+        25000         0.015669          76.86
+        26000         0.013097          79.90
+        27000         0.020091          82.97
+        28000         0.093807          86.01
+        29000         0.013787          89.03
+        30000         0.011082          92.08
+        31000         0.008757          95.12
+        32000         0.007879          98.15
+        33000         0.008359         101.23
+        34000         0.006882         104.25
+        35000         0.009790         107.36
+        36000         0.007458         110.40
+        37000         0.010556         113.42
+        38000         0.011130         116.46
+        39000         0.008095         119.51
+        40000         0.008434         122.59
+        41000         0.010360         125.64
+        42000         0.009087         128.68
+        43000         0.010618         131.71
+        44000         0.010058         134.76
+        45000         0.009601         137.80
+        46000         0.009698         140.85
+        47000         0.011541         143.90
+        48000         0.021738         146.96
+        49000         0.029183         149.98
+        50000         0.033105         153.08
+        51000         0.034617         156.09
+        52000         0.035640         159.12
+        53000         0.036104         162.22
+        54000         0.036826         165.26
+        55000         0.034847         168.32
+        56000         0.021891         171.37
+        57000         0.012118         174.41
+        58000         0.008132         177.45
+        59000         0.006927         180.49
+        60000         0.006489         183.53
+        61000         0.009690         186.58
+        62000         0.008400         189.63
+        63000         0.005831         192.78
+        64000         0.006506         195.83
+        65000         0.005165         198.84
+        66000         0.005051         201.96
+        67000         0.004781         205.07
+        68000         0.004655         208.11
+        69000         0.004445         211.12
+        70000         0.004783         214.13
+        71000         0.004487         217.22
+        72000         0.004068         220.25
+        73000         0.003903         223.27
+        74000         0.003730         226.33
+        75000         0.003583         229.36
+        76000         0.003430         232.50
+        77000         0.003301         235.60
+        78000         0.003166         238.68
+        79000         0.003044         241.76
+        80000         0.002932         244.79
+        81000         0.002773         247.82
+        82000         0.002633         250.85
+        83000         0.002517         253.87
+        84000         0.002380         256.89
+        85000         0.002247         259.92
+        86000         0.002136         262.94
+        87000         0.002040         265.95
+        88000         0.001951         269.01
+        89000         0.001862         272.22
+        90000         0.001774         275.41
+        91000         0.001690         278.41
+        92000         0.001616         281.41
+        93000         0.001548         284.40
+        94000         0.001481         287.38
+        95000         0.001412         290.36
+        96000         0.001334         293.33
+        97000         0.001253         296.37
+        98000         0.001173         299.46
+        99000         0.001117         302.53
+        100000         0.001058         305.53
+        101000         0.001006         308.46
+        102000         0.000961         311.59
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume   189337.5 m3
+       Volume change   189337.5 m3
+Final water coverage      0.082 
+    Mean water depth       61.2 mm
+     Max water depth     1134.9 mm 
+     Iteration limit 0
+            Run Time     314.12 s
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: culvert_basin1_5m.asc
+                   Water file: NULL
+                  Output file: water_cul.asc
+                 Scratch file: NULL
+                  Water added: 3.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 3794
+                         NROWS 3986
+                     XLLCORNER  289240.0
+                     YLLCORNER 5645571.0
+                      CELLSIZE       5.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+1267 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1267                  1265            0   
+1 :         1267                  1265            1266   
+2 :         1262                  1260            2532   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.654179          14.82
+        2000         0.135971          29.48
+        3000         0.122590          44.78
+        4000         0.113098          60.38
+        5000         0.039432          76.09
+        6000         0.031901          91.99
+        7000         0.028371         108.16
+        8000         0.029025         124.31
+        9000         0.040030         140.57
+        10000         0.056540         156.72
+        11000         0.031201         172.90
+        12000         0.017965         188.99
+        13000         0.016266         205.21
+        14000         0.016384         221.35
+        15000         0.016538         237.54
+        16000         0.017488         253.41
+        17000         0.021148         269.62
+        18000         0.023031         285.55
+        19000         0.031442         301.48
+        20000         0.037268         317.43
+        21000         0.040886         333.38
+        22000         0.043002         349.47
+        23000         0.016142         365.34
+        24000         0.008925         381.15
+        25000         0.010523         396.95
+        26000         0.005910         412.78
+        27000         0.006051         428.55
+        28000         0.005590         444.40
+        29000         0.003965         460.13
+        30000         0.003893         475.94
+        31000         0.004062         491.73
+        32000         0.004028         507.49
+        33000         0.003566         523.39
+        34000         0.003350         539.20
+        35000         0.003259         554.90
+        36000         0.003548         570.70
+        37000         0.004351         586.46
+        38000         0.004455         602.28
+        39000         0.004146         617.96
+        40000         0.003783         633.60
+        41000         0.006268         649.32
+        42000         0.004831         665.04
+        43000         0.004566         680.69
+        44000         0.004491         696.47
+        45000         0.003894         712.15
+        46000         0.003250         727.81
+        47000         0.002949         743.49
+        48000         0.002659         759.16
+        49000         0.002426         774.87
+        50000         0.002217         790.60
+        51000         0.002358         806.31
+        52000         0.002144         821.98
+        53000         0.002153         837.78
+        54000         0.002077         853.47
+        55000         0.002092         869.23
+        56000         0.002129         884.94
+        57000         0.002025         900.64
+        58000         0.002216         916.35
+        59000         0.001989         932.11
+        60000         0.002469         947.79
+        61000         0.012821         963.54
+        62000         0.004017         979.28
+        63000         0.003413         994.99
+        64000         0.003145        1010.75
+        65000         0.003280        1026.47
+        66000         0.002931        1042.19
+        67000         0.002919        1057.97
+        68000         0.002952        1073.64
+        69000         0.002859        1089.45
+        70000         0.002679        1105.17
+        71000         0.002544        1120.84
+        72000         0.002525        1136.64
+        73000         0.002421        1152.39
+        74000         0.002511        1168.14
+        75000         0.002190        1183.91
+        76000         0.003728        1199.61
+        77000         0.004103        1215.33
+        78000         0.003653        1231.14
+        79000         0.003160        1246.82
+        80000         0.002807        1262.58
+        81000         0.002553        1278.33
+        82000         0.002321        1294.05
+        83000         0.001898        1309.74
+        84000         0.002739        1325.47
+        85000         0.004330        1341.18
+        86000         0.005461        1356.89
+        87000         0.005800        1372.61
+        88000         0.005586        1388.34
+        89000         0.005856        1404.11
+        90000         0.006151        1419.89
+        91000         0.006109        1435.58
+        92000         0.006236        1451.49
+        93000         0.005817        1467.39
+        94000         0.003661        1483.24
+        95000         0.002377        1498.99
+        96000         0.001824        1514.70
+        97000         0.001494        1530.51
+        98000         0.001415        1546.23
+        99000         0.001425        1561.94
+        100000         0.001283        1577.71
+        101000         0.001210        1593.50
+        102000         0.001152        1609.20
+        103000         0.001106        1624.94
+        104000         0.001046        1640.61
+        105000         0.000986        1656.29
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume   702965.5 m3
+       Volume change   702965.5 m3
+Final water coverage      0.084 
+    Mean water depth       35.9 mm
+     Max water depth      657.2 mm 
+     Iteration limit 0
+            Run Time    1664.70 s
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: smithcreek_dem1m_sb5.asc
+                   Water file: NULL
+                  Output file: water_s.asc
+                 Scratch file: NULL
+                  Water added: 3.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         ncols 4712
+                         nrows 4826
+                     xllcorner  313418.0
+                     yllcorner 5632507.0
+                      cellsize       1.0
+                  NODATA_value   -9999.0
+           Setting array sizes
+           
+1573 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1573                  1571            0   
+1 :         1573                  1571            1572   
+2 :         1568                  1566            3144   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.875016          17.77
+        2000         0.238175          35.17
+        3000         0.166341          52.56
+        4000         0.217661          69.76
+        5000         0.069708          87.14
+        6000         0.049330         104.33
+        7000         0.039733         121.84
+        8000         0.027658         139.65
+        9000         0.021034         157.36
+        10000         0.029556         175.19
+        11000         0.017924         192.99
+        12000         0.019657         210.73
+        13000         0.021978         228.66
+        14000         0.017547         246.39
+        15000         0.011309         264.22
+        16000         0.025104         282.17
+        17000         0.018511         299.87
+        18000         0.042862         317.74
+        19000         0.014611         335.63
+        20000         0.027014         353.47
+        21000         0.010463         371.41
+        22000         0.024650         389.20
+        23000         0.014773         407.15
+        24000         0.011043         425.15
+        25000         0.026211         443.17
+        26000         0.009359         460.94
+        27000         0.006205         478.81
+        28000         0.005778         496.84
+        29000         0.005032         514.86
+        30000         0.004373         532.77
+        31000         0.005859         550.74
+        32000         0.004281         568.69
+        33000         0.004115         586.63
+        34000         0.003656         604.92
+        35000         0.003749         622.87
+        36000         0.003248         640.84
+        37000         0.003130         658.90
+        38000         0.005625         676.75
+        39000         0.008097         694.77
+        40000         0.009565         712.66
+        41000         0.009354         730.45
+        42000         0.003157         748.50
+        43000         0.002574         766.47
+        44000         0.002608         784.43
+        45000         0.002922         802.28
+        46000         0.002541         820.03
+        47000         0.002563         838.04
+        48000         0.002374         855.86
+        49000         0.002238         873.70
+        50000         0.015016         891.66
+        51000         0.006833         909.52
+        52000         0.003091         927.58
+        53000         0.002896         945.48
+        54000         0.002173         963.27
+        55000         0.001889         981.27
+        56000         0.002137         999.14
+        57000         0.002352        1017.06
+        58000         0.002537        1035.17
+        59000         0.002696        1053.03
+        60000         0.003208        1070.94
+        61000         0.002948        1088.91
+        62000         0.003045        1106.93
+        63000         0.003125        1124.96
+        64000         0.002883        1142.80
+        65000         0.002162        1160.76
+        66000         0.002186        1178.61
+        67000         0.002268        1196.40
+        68000         0.002663        1214.46
+        69000         0.002414        1232.27
+        70000         0.002108        1250.19
+        71000         0.002079        1268.21
+        72000         0.002085        1286.04
+        73000         0.002408        1303.95
+        74000         0.002177        1321.87
+        75000         0.001896        1339.70
+        76000         0.002038        1357.78
+        77000         0.002305        1375.62
+        78000         0.002628        1393.59
+        79000         0.001729        1411.51
+        80000         0.001906        1429.34
+        81000         0.002094        1447.57
+        82000         0.002670        1465.47
+        83000         0.002138        1483.25
+        84000         0.004135        1501.26
+        85000         0.002334        1519.17
+        86000         0.001967        1537.16
+        87000         0.002033        1555.11
+        88000         0.002042        1572.93
+        89000         0.001894        1591.09
+        90000         0.001709        1609.05
+        91000         0.001676        1626.87
+        92000         0.001820        1644.98
+        93000         0.001749        1662.89
+        94000         0.001467        1680.96
+        95000         0.001356        1698.95
+        96000         0.001406        1716.89
+        97000         0.001433        1735.03
+        98000         0.001408        1752.87
+        99000         0.001438        1770.87
+        100000         0.001413        1788.87
+        101000         0.001350        1806.85
+        102000         0.001582        1824.90
+        103000         0.001419        1842.85
+        104000         0.001154        1860.77
+        105000         0.001167        1878.80
+        106000         0.001170        1896.74
+        107000         0.001185        1914.99
+        108000         0.001221        1933.14
+        109000         0.001210        1951.15
+        110000         0.001555        1969.15
+        111000         0.001523        1987.16
+        112000         0.001453        2005.14
+        113000         0.002393        2023.08
+        114000         0.002315        2040.99
+        115000         0.002236        2059.12
+        116000         0.002160        2077.04
+        117000         0.002053        2094.84
+        118000         0.001342        2112.52
+        119000         0.001295        2130.71
+        120000         0.001250        2148.53
+        121000         0.001206        2166.45
+        122000         0.001163        2184.12
+        123000         0.001122        2202.18
+        124000         0.001082        2220.11
+        125000         0.001043        2237.77
+        126000         0.001028        2255.85
+        127000         0.001003        2273.68
+        128000         0.000989        2291.43
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume    33010.8 m3
+       Volume change    33010.8 m3
+Final water coverage      0.067 
+    Mean water depth       44.7 mm
+     Max water depth      550.0 mm 
+     Iteration limit 0
+            Run Time    2303.22 s
