@@ -30,10 +30,10 @@ The WDPM requires OpenCL drivers in order to work properly. Use the following co
 gcc wdpm_mulGPU.c -o WDPM -lOpenCL
 ```
 
-Instruction of running the program:__
+Instruction of running the program:  
 **Add module**
-DEM file name (string)__
-Water file name (string) - Optional, Use NULL to omit Output file name (string)__
+DEM file name (string)  
+Water file name (string) - Optional, Use NULL to omit Output file name (string)  
 Output file name (string)
 Scratch file name (string) - Optional, use NULL to omit
 Depth of water to add (mm) (real) Water runoff fraction (real)
