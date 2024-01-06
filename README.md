@@ -31,18 +31,18 @@ gcc wdpm_mulGPU.c -o WDPM -lOpenCL
 ```
 
 Instruction of running the program:  
-**Add module**
+**Add module**  
 DEM file name (string)  
 Water file name (string) - Optional, Use NULL to omit Output file name (string)  
-Output file name (string)
-Scratch file name (string) - Optional, use NULL to omit
-Depth of water to add (mm) (real) Water runoff fraction (real)
-Runoff fraction
-Elevation tolerance (mm) (real)
-Specify 0 for serial CPU and 1 for opencl
-Specify 0 for OpenCL GPU and 1 for opencl CPU
-Zero depth threshold (mm) (real)
-Maximum number of iterations (integer) - Optional, Use 0 to omit
+Output file name (string)  
+Scratch file name (string) - Optional, use NULL to omit  
+Depth of water to add (mm) (real) Water runoff fraction (real)  
+Runoff fraction  
+Elevation tolerance (mm) (real)  
+Specify 0 for serial CPU and 1 for opencl  
+Specify 0 for OpenCL GPU and 1 for opencl CPU  
+Zero depth threshold (mm) (real)  
+Maximum number of iterations (integer) - Optional, Use 0 to omit  
 
 **Subtract module**
 DEM file name (string)
