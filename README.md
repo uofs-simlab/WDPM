@@ -73,3 +73,7 @@ Maximum number of iterations (integer) - Optional, Use 0 to omit
 ./WDPM add basin5.asc NULL water.asc NULL 10.0 1.0 1.0 1 0 0.005 0
 ```
 
+## OpenCL configuration
+To download and install OpenCL for different platform, please check the following list:  
+- Intel CPU: [a link](https://software.seek.intel.com/intel-opencl)
+
