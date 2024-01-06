@@ -19,7 +19,7 @@
 
 **Data** - experimental data in the paper:
 
-- The file names describe the experiment: the experiment group, module (add, substract, or drain), devices (GPU or CPU, and the number of devices), systems (the input files)
+- The file names describe the experiment: the experiment group, module (add, substract, or drain), devices (GPU or CPU, and the number of devices), and systems (the input files)
 
 
 ## Program manual
@@ -44,29 +44,29 @@ Specify 0 for OpenCL GPU and 1 for opencl CPU
 Zero depth threshold (mm) (real)  
 Maximum number of iterations (integer) - Optional, Use 0 to omit  
 
-- Subtract module
-DEM file name (string)
-Water file name (string)
-Output file name (string)
-Scratch file name (string) - Optional, use NULL to omit
-Depth of water to remove (mm) (real)
-Elevation tolerance (mm) (real)
-Specify 0 for serial CPU and 1 for opencl
-Specify 0 for OpenCL GPU and 1 for opencl CPU
-Zero depth threshold (mm) (real)
-Maximum number of iterations (integer) - Optional, Use 0 to omit
+- Subtract module  
+DEM file name (string)  
+Water file name (string)  
+Output file name (string)  
+Scratch file name (string) - Optional, use NULL to omit  
+Depth of water to remove (mm) (real)  
+Elevation tolerance (mm) (real)  
+Specify 0 for serial CPU and 1 for opencl  
+Specify 0 for OpenCL GPU and 1 for opencl CPU  
+Zero depth threshold (mm) (real)  
+Maximum number of iterations (integer) - Optional, Use 0 to omit  
 
-- Drain Module  
-DEM file name (string)
-Water file name (string) - Optional, Use NULL to omit
-Output file name (string)
-Scratch file name (string) - Optional, use NULL to omit
-Elevation tolerance (mm) (real)
-Drain tolerance (mm) (real)
-Specify 0 for serial CPU and 1 for opencl
-Specify 0 for OpenCL GPU and 1 for opencl CPU
-Zero depth threshold (mm) (real)
-Maximum number of iterations (integer) - Optional, Use 0 to omit
+- Drain Module    
+DEM file name (string)  
+Water file name (string) - Optional, Use NULL to omit  
+Output file name (string)  
+Scratch file name (string) - Optional, use NULL to omit  
+Elevation tolerance (mm) (real)  
+Drain tolerance (mm) (real)  
+Specify 0 for serial CPU and 1 for opencl  
+Specify 0 for OpenCL GPU and 1 for opencl CPU  
+Zero depth threshold (mm) (real)  
+Maximum number of iterations (integer) - Optional, Use 0 to omit  
 
 - An example of command
 ```
