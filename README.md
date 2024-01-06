@@ -75,5 +75,8 @@ Maximum number of iterations (integer) - Optional, Use 0 to omit
 
 ## OpenCL configuration
 To download and install OpenCL for different platform, please check the following list:  
-- Intel CPU: [a link](https://software.seek.intel.com/intel-opencl)
+- [Intel CPU](https://software.seek.intel.com/intel-opencl)
+- [AMD CPU](https://www.amd.com/en/support)
+- [NVIDIA GPU](https://www.nvidia.com/download/index.aspx?lang=en-us)
+- [AMD GPU](https://www.amd.com/en/support)
 
