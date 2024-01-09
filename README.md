@@ -1,9 +1,8 @@
-# WDPM Multiple GPUs
+# The multi-GPU Wetland DEM Ponding Model (WDPM)
 - WDPM simulates how runoff water is distributed across the Canadian Prairies
 - WDPM has been generalized to take advantage of multiple GPUs
 - A speedup of 2.39 has been observed using 4 GPUs with a real dataset
 - By using leading computing paradigms, WDPM can perform difficult simulations
-
 
 ## Folders and files  
 
@@ -12,24 +11,32 @@
 - README.md - this file  
 - WDPM_Multiple_GPU_EMS.pdf - the manuscript  
 
-**Code** - Contains program source code files:
+**/Code** - Contains program source code files:
 
 - wdpm_mulGPU.c - WDPM main line. Can be executed from the command line.
 - runoff.cl - OpenCL kernel that does the water smoothing
 
-**Data** - experimental data in the paper:
+**/Data** - Experimental data in the paper:
 
 - The file names describe the experiment: the experiment group, module (add, substract, or drain), devices (GPU or CPU, and the number of devices), and systems (the input files)
 
+## Installation
 
-## Program manual
+### OpenCL configuration
+The WDPM requires OpenCL drivers in order to work properly. To download and install OpenCL for different platform, please check the following list:  
+- [Intel CPU](https://software.seek.intel.com/intel-opencl)
+- [AMD CPU](https://www.amd.com/en/support)
+- [NVIDIA GPU](https://www.nvidia.com/download/index.aspx?lang=en-us)
+- [AMD GPU](https://www.amd.com/en/support)
 
-The WDPM requires OpenCL drivers in order to work properly. Use the following command to compile the program:  
+### Compile the code
+Use the following command to compile the program:  
 
 ```
 gcc wdpm_mulGPU.c -o WDPM -lOpenCL
 ```
 
+### Running the code
 Instruction of running the program:  
 - Add module   
 DEM file name (string)  
@@ -72,11 +79,3 @@ Maximum number of iterations (integer) - Optional, Use 0 to omit
 ```
 ./WDPM add basin5.asc NULL water.asc NULL 10.0 1.0 1.0 1 0 0.005 0
 ```
-
-## OpenCL configuration
-To download and install OpenCL for different platform, please check the following list:  
-- [Intel CPU](https://software.seek.intel.com/intel-opencl)
-- [AMD CPU](https://www.amd.com/en/support)
-- [NVIDIA GPU](https://www.nvidia.com/download/index.aspx?lang=en-us)
-- [AMD GPU](https://www.amd.com/en/support)
-
