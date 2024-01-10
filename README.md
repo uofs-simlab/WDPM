@@ -32,7 +32,7 @@ The WDPM requires OpenCL drivers in order to work properly. To download and inst
 - [AMD GPU](https://www.amd.com/en/support)
 
 ### Compiling the code
-The gcc compiler (11.4.0 or later) is recommended. Use the following command to compile the program:  
+The gcc compiler, version 11.4.0 or later, is recommended. Use the following command to compile the program:  
 
 ```
 gcc wdpm_mulGPU.c -o WDPM -lOpenCL
@@ -56,29 +56,33 @@ The add, subtract, and drain modules take the following input arguments:
 | Zero depth threshold (mm) | real | |  
 | Maximum number of iterations | integer | Optional - use 0 to omit |  
 
-#### Subtract module  
-DEM file name (string)  
-Water file name (string)  
-Output file name (string)  
-Scratch file name (string) - Optional, use NULL to omit  
-Depth of water to remove (mm) (real)  
-Elevation tolerance (mm) (real)  
-Specify 0 for serial CPU and 1 for opencl  
-Specify 0 for OpenCL GPU and 1 for opencl CPU  
-Zero depth threshold (mm) (real)  
-Maximum number of iterations (integer) - Optional, Use 0 to omit  
+#### Subtract module
+| Argument | Type | Notes |
+| -------- | ---- | ----- |
+| DEM file name | string | |  
+| Water file name | string | |  
+| Output file name | string | |  
+| Scratch file name | string | Optional - use NULL to omit |  
+| Depth of water to remove (mm) | real | |  
+| Elevation tolerance (mm) | real | |  
+| Parallel control | integer | Specify 0 for serial CPU and 1 for OpenCL | 
+| OpenCL options | integer | Specify 0 for OpenCL GPU and 1 for OpenCL CPU | 
+| Zero depth threshold (mm) | real | |  
+| Maximum number of iterations | integer | Optional - use 0 to omit |  
 
-#### Drain module    
-DEM file name (string)  
-Water file name (string) - Optional, Use NULL to omit  
-Output file name (string)  
-Scratch file name (string) - Optional, use NULL to omit  
-Elevation tolerance (mm) (real)  
-Drain tolerance (mm) (real)  
-Specify 0 for serial CPU and 1 for opencl  
-Specify 0 for OpenCL GPU and 1 for opencl CPU  
-Zero depth threshold (mm) (real)  
-Maximum number of iterations (integer) - Optional, Use 0 to omit  
+#### Drain module
+| Argument | Type | Notes |
+| -------- | ---- | ----- |
+| DEM file name | string | |  
+| Water file name | string | Optional - use NULL to omit |
+| Output file name | string | |  
+| Scratch file name | string | Optional - use NULL to omit |  
+| Elevation tolerance (mm) | real | |  
+| Drain tolerance (mm) | real | |  
+| Parallel control | integer | Specify 0 for serial CPU and 1 for OpenCL |
+| OpenCL options | integer | Specify 0 for OpenCL GPU and 1 for OpenCL CPU | 
+| Zero depth threshold (mm) | real | |  
+| Maximum number of iterations | integer | Optional - use 0 to omit | 
 
 #### Sample run using the add module
 ```
