@@ -1,4 +1,4 @@
-# The multi-GPU Wetland DEM Ponding Model (WDPM)
+# The multi-GPU Wetland DEM Ponding Model (WDPM) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10609000.svg)](https://doi.org/10.5281/zenodo.10609000)
 
 ## Background
 - WDPM simulates how runoff water is distributed across the Canadian Prairies
