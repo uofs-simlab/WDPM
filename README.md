@@ -8,14 +8,14 @@
 
 ## Folders and files  
 
-**[/](/)** - Contains files describing the program  
+**[/](/)** - Contains files describing the program:  
 
 - [README.md](/README.md) - this file  
-- [WDPM_Multiple_GPU_EMS.pdf](/WDPM_Multiple_GPU_EMS.pdf) - the manuscript  
 
 **[/Code](/Code)** - Contains program source code files:
 
-- [wdpm_mulGPU.c](/Code/wdpm_mulGPU.c) - WDPM main line. Can be executed from the command line.
+- [wdpm_mulGPU.c](/Code/wdpm_mulGPU.c) - WDPM base code. Can be executed from the command line.
+- [wdpm_mulgpu_balanced.c](/Code/wdpm_mulgpu_balanced.c) - WDPM with additional workload balancing optimizations.
 - [runoff.cl](/Code/runoff.cl) - OpenCL kernel that does the water smoothing
 
 **[/Data](/Data)** - Experimental data in the paper:
