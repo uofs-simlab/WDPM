@@ -1,0 +1,1126 @@
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: basin5.asc
+                   Water file: null
+                  Output file: water.asc
+                 Scratch file: null
+                  Water added: 3.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 471
+                         NROWS 482
+                     XLLCORNER  313420.0
+                     YLLCORNER 5632511.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+157 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         157                  155            0   
+1 :         157                  155            156   
+2 :         159                  157            312   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.430251           0.64
+        2000         0.165572           1.43
+        3000         0.154045           2.33
+        4000         0.022132           3.27
+        5000         0.009708           4.22
+        6000         0.004256           5.22
+        7000         0.001824           6.24
+        8000         0.000765           7.26
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume    33010.8 m3
+       Volume change    33010.8 m3
+Final water coverage      0.063 
+    Mean water depth       47.6 mm
+     Max water depth      491.5 mm 
+     Iteration limit 0
+            Run Time      30.36 s
+Wed Jun 19 18:42:49 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla P100-PCIE-12GB           On  |   00000000:03:00.0 Off |                    0 |
+| N/A   32C    P0             30W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla P100-PCIE-12GB           On  |   00000000:82:00.0 Off |                    0 |
+| N/A   32C    P0             30W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Tesla P100-PCIE-12GB           On  |   00000000:83:00.0 Off |                    0 |
+| N/A   31C    P0             29W /  250W |       0MiB /  12288MiB |      5%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: basin5.asc
+                   Water file: null
+                  Output file: water.asc
+                 Scratch file: null
+                  Water added: 3.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 471
+                         NROWS 482
+                     XLLCORNER  313420.0
+                     YLLCORNER 5632511.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+The number of balance active cell is 36678 
+        Using OpenCL GPU for Computation
+section: 160, iteration: 158, offset: 0, cur_col: 159 
+section: 103, iteration: 101, offset: 159, cur_col: 262 
+section: 210, iteration: 208, offset: 261, cur_col: 262 
+         section size    iteration column size    start from 
+0 :         160                  158            0   
+1 :         103                  101            159   
+2 :         210                  208            261   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.430253           0.65
+        2000         0.165589           1.44
+        3000         0.154024           2.33
+        4000         0.022133           3.27
+        5000         0.009708           4.22
+        6000         0.004256           5.21
+        7000         0.001824           6.26
+        8000         0.000765           7.32
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume    33010.8 m3
+       Volume change    33010.8 m3
+Final water coverage      0.063 
+    Mean water depth       47.6 mm
+     Max water depth      491.5 mm 
+     Iteration limit 0
+            Run Time       7.46 s
+Wed Jun 19 18:42:57 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla P100-PCIE-12GB           On  |   00000000:03:00.0 Off |                    0 |
+| N/A   32C    P0             30W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla P100-PCIE-12GB           On  |   00000000:82:00.0 Off |                    0 |
+| N/A   32C    P0             30W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Tesla P100-PCIE-12GB           On  |   00000000:83:00.0 Off |                    0 |
+| N/A   31C    P0             29W /  250W |       0MiB /  12288MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: culvert_basin1_5m.asc
+                   Water file: null
+                  Output file: water.asc
+                 Scratch file: null
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 3794
+                         NROWS 3986
+                     XLLCORNER  289240.0
+                     YLLCORNER 5645571.0
+                      CELLSIZE       5.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+1267 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1267                  1265            0   
+1 :         1267                  1265            1266   
+2 :         1262                  1260            2532   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.442726          16.06
+        2000         0.063579          32.34
+        3000         0.030458          49.86
+        4000         0.035132          67.90
+        5000         0.014391          85.92
+        6000         0.006735         104.41
+        7000         0.005237         122.98
+        8000         0.007669         141.73
+        9000         0.005947         160.31
+        10000         0.003177         178.99
+        11000         0.003609         197.63
+        12000         0.003464         216.21
+        13000         0.003325         234.88
+        14000         0.003193         253.52
+        15000         0.002939         272.10
+        16000         0.002502         290.84
+        17000         0.002272         309.41
+        18000         0.002149         328.09
+        19000         0.002039         346.72
+        20000         0.001927         365.30
+        21000         0.001704         383.97
+        22000         0.001458         402.60
+        23000         0.001017         421.17
+        24000         0.000870         439.90
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume   234321.8 m3
+       Volume change   234321.8 m3
+Final water coverage      0.051 
+    Mean water depth       19.7 mm
+     Max water depth      443.7 mm 
+     Iteration limit 0
+            Run Time     449.93 s
+Wed Jun 19 18:50:34 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla P100-PCIE-12GB           On  |   00000000:03:00.0 Off |                    0 |
+| N/A   33C    P0             30W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla P100-PCIE-12GB           On  |   00000000:82:00.0 Off |                    0 |
+| N/A   36C    P0             31W /  250W |       0MiB /  12288MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Tesla P100-PCIE-12GB           On  |   00000000:83:00.0 Off |                    0 |
+| N/A   34C    P0             30W /  250W |       0MiB /  12288MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: culvert_basin1_5m.asc
+                   Water file: null
+                  Output file: water.asc
+                 Scratch file: null
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 3794
+                         NROWS 3986
+                     XLLCORNER  289240.0
+                     YLLCORNER 5645571.0
+                      CELLSIZE       5.0
+                  NODATA_VALUE  -99999.0
+           Setting array sizes
+           
+The number of balance active cell is 3124291 
+        Using OpenCL GPU for Computation
+section: 1648, iteration: 1646, offset: 0, cur_col: 1647 
+section: 901, iteration: 899, offset: 1647, cur_col: 2548 
+section: 1247, iteration: 1245, offset: 2547, cur_col: 2548 
+         section size    iteration column size    start from 
+0 :         1648                  1646            0   
+1 :         901                  899            1647   
+2 :         1247                  1245            2547   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.442726          12.95
+        2000         0.063579          27.01
+        3000         0.030458          42.64
+        4000         0.035132          58.85
+        5000         0.014391          75.07
+        6000         0.006735          91.52
+        7000         0.005237         108.31
+        8000         0.007669         124.96
+        9000         0.005947         141.76
+        10000         0.003177         158.39
+        11000         0.003609         175.13
+        12000         0.003464         191.83
+        13000         0.003325         356.60
+        14000         0.003193         469.69
+        15000         0.002939         552.88
+        16000         0.002502         569.25
+        17000         0.002272         585.59
+        18000         0.002149         601.94
+        19000         0.002039         618.35
+        20000         0.001927         635.03
+        21000         0.001704         651.30
+        22000         0.001458         667.57
+        23000         0.001017         683.84
+        24000         0.000870         700.11
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume   234321.8 m3
+       Volume change   234321.8 m3
+Final water coverage      0.051 
+    Mean water depth       19.7 mm
+     Max water depth      443.7 mm 
+     Iteration limit 0
+            Run Time     709.04 s
+Wed Jun 19 19:02:29 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla P100-PCIE-12GB           On  |   00000000:03:00.0 Off |                    0 |
+| N/A   35C    P0             31W /  250W |       0MiB /  12288MiB |      2%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla P100-PCIE-12GB           On  |   00000000:82:00.0 Off |                    0 |
+| N/A   36C    P0             31W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Tesla P100-PCIE-12GB           On  |   00000000:83:00.0 Off |                    0 |
+| N/A   35C    P0             30W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: patched_YQ.asc
+                   Water file: null
+                  Output file: water.asc
+                 Scratch file: null
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 5877
+                         NROWS 5519
+                     XLLCORNER  572217.0
+                     YLLCORNER 5760951.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -10000.0
+           Setting array sizes
+           
+1960 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1960                  1958            0   
+1 :         1960                  1958            1959   
+2 :         1959                  1957            3918   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.907838          30.15
+        2000         0.303020          59.08
+        3000         0.191851          87.38
+        4000         0.133956         115.29
+        5000         0.098083         142.91
+        6000         0.048197         170.04
+        7000         0.014351         197.15
+        8000         0.013456         224.03
+        9000         0.020014         250.74
+        10000         0.011654         277.35
+        11000         0.006989         303.84
+        12000         0.006236         330.34
+        13000         0.005719         356.56
+        14000         0.005247         382.92
+        15000         0.004815         409.01
+        16000         0.004924         435.26
+        17000         0.004059         461.26
+        18000         0.003727         487.49
+        19000         0.003423         513.34
+        20000         0.003145         539.51
+        21000         0.002888         565.30
+        22000         0.002653         830.15
+        23000         0.002438         855.89
+        24000         0.002239         881.94
+        25000         0.002057         907.65
+        26000         0.001890         933.63
+        27000         0.001751         959.29
+        28000         0.001738         985.21
+        29000         0.001726        1010.85
+        30000         0.001714        1036.72
+        31000         0.001701        1062.33
+        32000         0.001688        1088.15
+        33000         0.001676        1113.75
+        34000         0.001663        1139.52
+        35000         0.001650        1165.09
+        36000         0.001637        1190.82
+        37000         0.001623        1216.39
+        38000         0.001610        1242.07
+        39000         0.001597        1267.63
+        40000         0.001584        1293.27
+        41000         0.001571        1318.82
+        42000         0.001558        1344.42
+        43000         0.001544        1369.95
+        44000         0.001531        1395.53
+        45000         0.001518        1421.05
+        46000         0.001505        1446.59
+        47000         0.001492        1472.11
+        48000         0.001479        1497.63
+        49000         0.001467        1523.15
+        50000         0.001454        1548.66
+        51000         0.001441        1574.18
+        52000         0.001428        1599.69
+        53000         0.001416        1625.21
+        54000         0.001403        1650.71
+        55000         0.001391        1676.21
+        56000         0.001379        1701.71
+        57000         0.001366        1727.22
+        58000         0.001354        1752.72
+        59000         0.001342        1778.22
+        60000         0.001330        1803.72
+        61000         0.001318        2101.15
+        62000         0.001306        2150.71
+        63000         0.001295        2176.21
+        64000         0.001283        2201.70
+        65000         0.001272        2227.20
+        66000         0.001260        2252.68
+        67000         0.001249        2278.17
+        68000         0.001238        2303.65
+        69000         0.001226        2329.15
+        70000         0.001215        2354.63
+        71000         0.001204        2380.11
+        72000         0.001193        2414.14
+        73000         0.001183        2439.62
+        74000         0.001172        2465.10
+        75000         0.001161        2490.58
+        76000         0.001151        2516.06
+        77000         0.001140        2541.54
+        78000         0.001130        2567.02
+        79000         0.001120        2592.50
+        80000         0.001110        2617.98
+        81000         0.001100        2643.45
+        82000         0.001090        2668.92
+        83000         0.001080        2694.40
+        84000         0.001070        2719.89
+        85000         0.001060        2745.40
+        86000         0.001051        2770.87
+        87000         0.001041        2796.35
+        88000         0.001032        2821.82
+        89000         0.001022        2847.29
+        90000         0.001013        2872.76
+        91000         0.001004        2898.24
+        92000         0.000995        2923.71
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume  1885022.7 m3
+       Volume change  1885022.7 m3
+Final water coverage      0.058 
+    Mean water depth       17.3 mm
+     Max water depth     1004.6 mm 
+     Iteration limit 0
+            Run Time    2945.40 s
+Wed Jun 19 19:51:47 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla P100-PCIE-12GB           On  |   00000000:03:00.0 Off |                    0 |
+| N/A   34C    P0             31W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla P100-PCIE-12GB           On  |   00000000:82:00.0 Off |                    0 |
+| N/A   35C    P0             31W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Tesla P100-PCIE-12GB           On  |   00000000:83:00.0 Off |                    0 |
+| N/A   33C    P0             30W /  250W |       0MiB /  12288MiB |      7%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: patched_YQ.asc
+                   Water file: null
+                  Output file: water.asc
+                 Scratch file: null
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         NCOLS 5877
+                         NROWS 5519
+                     XLLCORNER  572217.0
+                     YLLCORNER 5760951.0
+                      CELLSIZE      10.0
+                  NODATA_VALUE  -10000.0
+           Setting array sizes
+           
+The number of balance active cell is 6283409 
+        Using OpenCL GPU for Computation
+section: 2155, iteration: 2153, offset: 0, cur_col: 2154 
+section: 1522, iteration: 1520, offset: 2154, cur_col: 3676 
+section: 2202, iteration: 2200, offset: 3675, cur_col: 3676 
+         section size    iteration column size    start from 
+0 :         2155                  2153            0   
+1 :         1522                  1520            2154   
+2 :         2202                  2200            3675   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.907838          24.60
+        2000         0.303020          48.46
+        3000         0.191851          72.16
+        4000         0.133956          95.79
+        5000         0.098083         119.33
+        6000         0.048197         143.27
+        7000         0.014338         167.21
+        8000         0.013455         191.36
+        9000         0.019930         215.26
+        10000         0.011726         239.32
+        11000         0.006987         263.16
+        12000         0.006236         287.08
+        13000         0.005719         310.96
+        14000         0.005247         334.75
+        15000         0.004815         358.68
+        16000         0.004943         382.37
+        17000         0.004059         406.24
+        18000         0.003727         429.99
+        19000         0.003423         453.80
+        20000         0.003145         477.32
+        21000         0.002888         501.04
+        22000         0.002653         524.49
+        23000         0.002438         548.06
+        24000         0.002239         571.53
+        25000         0.002057         595.01
+        26000         0.001890         618.41
+        27000         0.001751         641.72
+        28000         0.001738         665.16
+        29000         0.001726         688.42
+        30000         0.001714         711.77
+        31000         0.001701         734.97
+        32000         0.001688         758.25
+        33000         0.001676         781.40
+        34000         0.001663         804.61
+        35000         0.001650         827.72
+        36000         0.001637         850.80
+        37000         0.001623         873.90
+        38000         0.001610         896.93
+        39000         0.001597         919.96
+        40000         0.001584         942.97
+        41000         0.001571         965.99
+        42000         0.001558         988.99
+        43000         0.001544        1012.00
+        44000         0.001531        1034.99
+        45000         0.001518        1057.98
+        46000         0.001505        1080.97
+        47000         0.001492        1103.97
+        48000         0.001479        1126.96
+        49000         0.001467        1149.95
+        50000         0.001454        1172.94
+        51000         0.001441        1195.93
+        52000         0.001428        1218.92
+        53000         0.001416        1241.90
+        54000         0.001403        1264.88
+        55000         0.001391        1287.87
+        56000         0.001379        1310.85
+        57000         0.001366        1333.84
+        58000         0.001354        1356.82
+        59000         0.001342        1379.81
+        60000         0.001330        1402.78
+        61000         0.001318        1425.77
+        62000         0.001306        1448.74
+        63000         0.001295        1471.73
+        64000         0.001283        1494.70
+        65000         0.001272        1517.68
+        66000         0.001260        1540.65
+        67000         0.001249        1563.63
+        68000         0.001238        1586.60
+        69000         0.001226        1609.58
+        70000         0.001215        1632.55
+        71000         0.001204        1655.52
+        72000         0.001193        1678.48
+        73000         0.001183        1701.46
+        74000         0.001172        1724.43
+        75000         0.001161        1747.40
+        76000         0.001151        1770.36
+        77000         0.001140        1793.33
+        78000         0.001130        1816.30
+        79000         0.001120        1839.26
+        80000         0.001110        1862.23
+        81000         0.001100        1885.20
+        82000         0.001090        1908.17
+        83000         0.001080        1931.14
+        84000         0.001070        1954.10
+        85000         0.001060        1977.07
+        86000         0.001051        2000.02
+        87000         0.001041        2022.99
+        88000         0.001032        2045.95
+        89000         0.001022        2068.92
+        90000         0.001013        2091.88
+        91000         0.001004        2114.84
+        92000         0.000995        2137.79
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume  1885022.7 m3
+       Volume change  1885022.7 m3
+Final water coverage      0.058 
+    Mean water depth       17.3 mm
+     Max water depth     1004.6 mm 
+     Iteration limit 0
+            Run Time    2159.46 s
+Wed Jun 19 20:28:00 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla P100-PCIE-12GB           On  |   00000000:03:00.0 Off |                    0 |
+| N/A   35C    P0             31W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla P100-PCIE-12GB           On  |   00000000:82:00.0 Off |                    0 |
+| N/A   36C    P0             31W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Tesla P100-PCIE-12GB           On  |   00000000:83:00.0 Off |                    0 |
+| N/A   34C    P0             30W /  250W |       0MiB /  12288MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: smithcreek_dem1m_sb5.asc
+                   Water file: null
+                  Output file: water.asc
+                 Scratch file: null
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         ncols 4712
+                         nrows 4826
+                     xllcorner  313418.0
+                     yllcorner 5632507.0
+                      cellsize       1.0
+                  NODATA_value   -9999.0
+           Setting array sizes
+           
+1573 
+        Using OpenCL GPU for Computation
+0 
+0 
+         section size    iteration column size    start from 
+0 :         1573                  1571            0   
+1 :         1573                  1571            1572   
+2 :         1568                  1566            3144   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.651428          19.93
+        2000         0.137253          39.34
+        3000         0.139149          58.64
+        4000         0.051094          77.92
+        5000         0.034281          97.17
+        6000         0.037790         116.69
+        7000         0.053915         137.17
+        8000         0.024252         157.74
+        9000         0.054208         178.34
+        10000         0.097181         198.97
+        11000         0.025466         219.75
+        12000         0.024960         240.34
+        13000         0.027676         261.18
+        14000         0.058213         281.84
+        15000         0.018596         302.74
+        16000         0.026305         323.60
+        17000         0.014867         344.42
+        18000         0.023924         365.40
+        19000         0.035007         386.24
+        20000         0.015913         407.23
+        21000         0.005890         428.01
+        22000         0.007209         449.03
+        23000         0.005272         469.82
+        24000         0.005036         490.75
+        25000         0.004979         511.62
+        26000         0.012094         532.47
+        27000         0.008227         553.45
+        28000         0.008649         574.23
+        29000         0.003972         595.26
+        30000         0.003653         616.04
+        31000         0.003290         637.06
+        32000         0.003194         657.84
+        33000         0.003036         678.78
+        34000         0.002725         699.67
+        35000         0.002635         720.57
+        36000         0.002541         741.60
+        37000         0.002406         762.44
+        38000         0.003719         783.52
+        39000         0.002864         804.38
+        40000         0.002838         825.43
+        41000         0.002355         846.33
+        42000         0.002292         867.32
+        43000         0.002092         888.27
+        44000         0.001955         909.16
+        45000         0.001851         930.19
+        46000         0.001748         951.02
+        47000         0.002522         972.06
+        48000         0.001469         992.87
+        49000         0.001338        1013.77
+        50000         0.001100        1034.63
+        51000         0.000968        1055.48
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume    11003.6 m3
+       Volume change    11003.6 m3
+Final water coverage      0.042 
+    Mean water depth       24.0 mm
+     Max water depth      550.0 mm 
+     Iteration limit 0
+            Run Time    1068.75 s
+Wed Jun 19 20:45:57 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 550.54.15              Driver Version: 550.54.15      CUDA Version: 12.4     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla P100-PCIE-12GB           On  |   00000000:03:00.0 Off |                    0 |
+| N/A   35C    P0             31W /  250W |       0MiB /  12288MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla P100-PCIE-12GB           On  |   00000000:82:00.0 Off |                    0 |
+| N/A   37C    P0             31W /  250W |       0MiB /  12288MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  Tesla P100-PCIE-12GB           On  |   00000000:83:00.0 Off |                    0 |
+| N/A   33C    P0             30W /  250W |       0MiB /  12288MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+                                                                   
+                                                                   
+WDPM_add 1.0 - Wetland DEM Ponding Model - parallel version
+Copyright (C) 2010,2012 Kevin Shook, Centre for Hydrology
+--------------------------------------------------------------------
+                                                                   
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+                                                                   
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+                                                                   
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+                                                                   
+This program adds water to an ArcGIS ASCII file of water runoff
+and redistributes water over the DEM
+From the algorithm of Shapiro, M., & Westervelt, J. (1992). 
+An Algebra for GIS and Image Processing (pp. 1-22).
+                                                                   
+                                                                   
+               WDPM Parameters
+                Function used: add
+                     DEM file: smithcreek_dem1m_sb5.asc
+                   Water file: null
+                  Output file: water.asc
+                 Scratch file: null
+                  Water added: 1.0 mm
+              Runoff fraction: 1.0
+          Elevation tolerance: 1.0 mm
+         Zero depth threshold: 0.0000 mm
+               
+    Using Parallel OpenCL for Computation
+             No iteration limit specified
+                  
+            ArcGIS file header
+                         ncols 4712
+                         nrows 4826
+                     xllcorner  313418.0
+                     yllcorner 5632507.0
+                      cellsize       1.0
+                  NODATA_value   -9999.0
+           Setting array sizes
+           
+The number of balance active cell is 3667866 
+        Using OpenCL GPU for Computation
+section: 1603, iteration: 1601, offset: 0, cur_col: 1602 
+section: 1036, iteration: 1034, offset: 1602, cur_col: 2638 
+section: 2075, iteration: 2073, offset: 2637, cur_col: 2638 
+         section size    iteration column size    start from 
+0 :         1603                  1601            0   
+1 :         1036                  1034            1602   
+2 :         2075                  2073            2637   
+           
+    Water file will be created
+               
+            Doing calculations
+     iterations        max diff        run time
+                         (m)             (s)
+        1000         0.651426          15.84
+        2000         0.137254          31.02
+        3000         0.139149          46.44
+        4000         0.051093          61.99
+        5000         0.034292          77.58
+        6000         0.037871          93.89
+        7000         0.053848         111.17
+        8000         0.024252         128.48
+        9000         0.054208         146.03
+        10000         0.097181         163.48
+        11000         0.025466         181.07
+        12000         0.024960         198.55
+        13000         0.027676         216.17
+        14000         0.058213         233.63
+        15000         0.018604         251.23
+        16000         0.026285         268.79
+        17000         0.014867         286.29
+        18000         0.023979         303.96
+        19000         0.035008         321.44
+        20000         0.015876         338.97
+        21000         0.005900         356.70
+        22000         0.007209         374.24
+        23000         0.005272         391.80
+        24000         0.005036         409.40
+        25000         0.004979         426.87
+        26000         0.012101         444.45
+        27000         0.008260         461.91
+        28000         0.008649         479.35
+        29000         0.003972         496.87
+        30000         0.003653         514.33
+        31000         0.003290         531.79
+        32000         0.003194         549.29
+        33000         0.003036         566.71
+        34000         0.002725         584.10
+        35000         0.002635         601.51
+        36000         0.002541         618.86
+        37000         0.002406         636.19
+        38000         0.003719         653.50
+        39000         0.002864         670.81
+        40000         0.002838         688.11
+        41000         0.002355         705.42
+        42000         0.002292         722.73
+        43000         0.002092         740.04
+        44000         0.001955         757.35
+        45000         0.001851         774.66
+        46000         0.001748         792.00
+        47000         0.002505         809.36
+        48000         0.001469         826.78
+        49000         0.001338         844.19
+        50000         0.001100         861.61
+        51000         0.000968         879.03
+                     
+              WDPM run summary
+      Initial volume        0.0 m3
+        Final volume    11003.6 m3
+       Volume change    11003.6 m3
+Final water coverage      0.042 
+    Mean water depth       24.0 mm
+     Max water depth      550.0 mm 
+     Iteration limit 0
+            Run Time     895.12 s
